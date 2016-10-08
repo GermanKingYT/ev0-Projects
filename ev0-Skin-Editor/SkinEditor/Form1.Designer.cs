@@ -88,6 +88,8 @@
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +100,7 @@
             this.SkinsTextbox.Location = new System.Drawing.Point(703, 48);
             this.SkinsTextbox.Name = "SkinsTextbox";
             this.SkinsTextbox.ReadOnly = true;
-            this.SkinsTextbox.Size = new System.Drawing.Size(234, 467);
+            this.SkinsTextbox.Size = new System.Drawing.Size(234, 397);
             this.SkinsTextbox.TabIndex = 0;
             this.SkinsTextbox.Text = "";
             // 
@@ -1765,11 +1767,35 @@
             this.metroLabel7.TabIndex = 21;
             this.metroLabel7.Text = "Preset Patterns";
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(703, 486);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(234, 29);
+            this.metroButton1.TabIndex = 50;
+            this.metroButton1.Text = "Reset all Seed\'s";
+            this.metroToolTip1.SetToolTip(this.metroButton1, "Resets the Wear to Factory New (0.01)");
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(703, 451);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(234, 29);
+            this.metroButton2.TabIndex = 51;
+            this.metroButton2.Text = "Reset all Wear\'s";
+            this.metroToolTip1.SetToolTip(this.metroButton2, "Resets the Wear to Factory New (0.01)");
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 538);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroPanel3);
             this.Controls.Add(this.metroLabel6);
@@ -1855,6 +1881,8 @@
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }
 

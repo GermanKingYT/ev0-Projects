@@ -1,21 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using MetroFramework;
-using IniParser.Model;
 using IniParser;
+using MetroFramework;
+using MetroFramework.Forms;
 
 namespace SkinEditor
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class Form1 : MetroForm
     {
         public Form1()
         {
@@ -24,9 +15,9 @@ namespace SkinEditor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            FileIniDataParser fileIniData = new FileIniDataParser();
+            var fileIniData = new FileIniDataParser();
 
-            IniData parsedData = fileIniData.ReadFile("skins.ini");
+            var parsedData = fileIniData.ReadFile("skins.ini");
 
             SkinsTextbox.Text = parsedData.ToString();
         }
@@ -526,31 +517,32 @@ namespace SkinEditor
             }
         }
 
-        //Trackbar Percent to Label
+        //Trackbar Percent to Label [FINISHED]
         private void skinweartrackbar_Scroll(object sender, ScrollEventArgs e)
         {
             skinweartrackbarprcent.Text = skinweartrackbar.Value.ToString();
         }
 
-        //Save Current Skin
+        //Save Current Skin [NOT FINISHED]
         private void metroButton3_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            IniData data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile("skins.ini");
 
-            if (dummycheckbox.Visible == true)
+            if (dummycheckbox.Visible)
             {
-                MetroMessageBox.Show(this, "Please Select a Weapon and try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MetroMessageBox.Show(this, "Please Select a Weapon and try again!", "Information", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             else
             {
                 #region AWP
+
                 if (choseweaponcombobox.SelectedItem.ToString() == "AWP")
-                {
                     if (awpselectskincheckbox.SelectedItem == null)
                     {
-                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     else
@@ -651,15 +643,16 @@ namespace SkinEditor
                             parser.WriteFile("skins.ini", data);
                         }
                     }
-                }
+
                 #endregion AWP
 
                 #region AK47
+
                 if (choseweaponcombobox.SelectedItem.ToString() == "AK47")
-                {
                     if (ak47skinselectioncombobox.SelectedItem == null)
                     {
-                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     else
@@ -785,115 +778,1849 @@ namespace SkinEditor
                             parser.WriteFile("skins.ini", data);
                         }
                     }
-                }
+
                 #endregion AK47
 
-                MetroMessageBox.Show(this, "Skin for " + choseweaponcombobox.SelectedItem.ToString() + " saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                #region DEAGLE
 
-                FileIniDataParser fileIniData = new FileIniDataParser();
-                IniData parsedData = fileIniData.ReadFile("skins.ini");
+                if (choseweaponcombobox.SelectedItem.ToString() == "DEAGLE")
+                    if (deagleselectskincheckbox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Blaze")
+                        {
+                            data["1"]["SkinID"] = "37";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Bronze Deco")
+                        {
+                            data["1"]["SkinID"] = "425";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Cobalt Disruption")
+                        {
+                            data["1"]["SkinID"] = "231";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Conspiracy")
+                        {
+                            data["1"]["SkinID"] = "351";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Corinthian")
+                        {
+                            data["1"]["SkinID"] = "509";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Crimson Web")
+                        {
+                            data["1"]["SkinID"] = "232";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Directive")
+                        {
+                            data["1"]["SkinID"] = "603";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Forest DDPAT")
+                        {
+                            data["1"]["SkinID"] = "5";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Golden Koi")
+                        {
+                            data["1"]["SkinID"] = "185";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Hand Cannon")
+                        {
+                            data["1"]["SkinID"] = "328";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Heirloom")
+                        {
+                            data["1"]["SkinID"] = "273";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Hypnotic")
+                        {
+                            data["1"]["SkinID"] = "61";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Kumicho Dragon")
+                        {
+                            data["1"]["SkinID"] = "527";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Meteorite")
+                        {
+                            data["1"]["SkinID"] = "296";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Midnight Storm")
+                        {
+                            data["1"]["SkinID"] = "468";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Mudder")
+                        {
+                            data["1"]["SkinID"] = "90";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Naga")
+                        {
+                            data["1"]["SkinID"] = "397";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Night")
+                        {
+                            data["1"]["SkinID"] = "40";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Pilot")
+                        {
+                            data["1"]["SkinID"] = "347";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Sunset Storm 1")
+                        {
+                            data["1"]["SkinID"] = "469";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Sunset Storm 2")
+                        {
+                            data["1"]["SkinID"] = "470";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Urban DDPAT")
+                        {
+                            data["1"]["SkinID"] = "17";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "Urban Rubble")
+                        {
+                            data["1"]["SkinID"] = "237";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                        if (deagleselectskincheckbox.SelectedItem.ToString() == "VariCamo")
+                        {
+                            data["1"]["SkinID"] = "235";
+                            parser.WriteFile("skins.ini", data);
+                        }
+                    }
+
+                #endregion DEAGLE
+
+                        MetroMessageBox.Show(this, "Skin for " + choseweaponcombobox.SelectedItem + " saved!", "Information",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                var fileIniData = new FileIniDataParser();
+                var parsedData = fileIniData.ReadFile("skins.ini");
                 SkinsTextbox.Text = parsedData.ToString();
             }
         }
 
-        //Save Current Seed & Wear
+        //Save Current Seed & Wear [FINISHED]
         private void metroButton4_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            IniData data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile("skins.ini");
 
             if (choseweaponcombobox.SelectedItem == null)
             {
-                MetroMessageBox.Show(this, "Please Select a Weapon and try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "Please Select a Weapon and try again!", "Information", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
-            else
+            if (skinseedtextbox.Text.Length == 0)
             {
-                if (skinseedtextbox.Text.Length == 0)
+                #region AWP
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "AWP")
                 {
-                    #region AWP
-                    if (choseweaponcombobox.SelectedItem.ToString() == "AWP")
-                    {
-                        data["9"]["SkinSeed"] = "0";
-                        data["9"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
-                        parser.WriteFile("skins.ini", data);
-                    }
-                    #endregion AWP
-
-                    #region AK47
-                    if (choseweaponcombobox.SelectedItem.ToString() == "AK47")
-                    {
-                        data["7"]["SkinSeed"] = "0";
-                        data["7"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
-                        parser.WriteFile("skins.ini", data);
-                    }
-                    #endregion AK47
+                    data["9"]["SkinSeed"] = "0";
+                    data["9"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
                 }
-                else
+
+                #endregion AWP
+
+                #region AK47
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "AK47")
                 {
-                    #region AWP
-                    if (choseweaponcombobox.SelectedItem.ToString() == "AWP")
-                    {
-                        data["9"]["SkinSeed"] = skinseedtextbox.Text;
-                        data["9"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
-                        parser.WriteFile("skins.ini", data);
-                    }
-                    #endregion AWP
-
-                    #region AK47
-                    if (choseweaponcombobox.SelectedItem.ToString() == "AK47")
-                    {
-                        data["7"]["SkinSeed"] = skinseedtextbox.Text;
-                        data["7"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
-                        parser.WriteFile("skins.ini", data);
-                    }
-                    #endregion AK47
+                    data["7"]["SkinSeed"] = "0";
+                    data["7"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
                 }
-            }
 
-            MetroMessageBox.Show(this, "Seed and Wear for " + choseweaponcombobox.SelectedItem.ToString() + " saved!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                #endregion AK47
 
-            FileIniDataParser fileIniData = new FileIniDataParser();
-            IniData parsedData = fileIniData.ReadFile("skins.ini");
-            SkinsTextbox.Text = parsedData.ToString();
-        }
+                #region DEAGLE
 
-        //Reset Wear Button
-        private void metroButton5_Click(object sender, EventArgs e)
-        {
-            var parser = new FileIniDataParser();
-            IniData data = parser.ReadFile("skins.ini");
+                if (choseweaponcombobox.SelectedItem.ToString() == "DEAGLE")
+                {
+                    data["1"]["SkinSeed"] = "0";
+                    data["1"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
 
-            if (choseweaponcombobox.SelectedItem == null)
-            {
-                MetroMessageBox.Show(this, "Please Select a Weapon and try again!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                #endregion DEAGLE
+
+                #region DUAL BERETTAS
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "DUAL BERETTAS")
+                {
+                    data["2"]["SkinSeed"] = "0";
+                    data["2"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion DUAL BERETTAS
+
+                #region FIVESEVEN
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FIVESEVEN")
+                {
+                    data["3"]["SkinSeed"] = "0";
+                    data["3"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion FIVESEVEN
+
+                #region GLOCK
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "GLOCK")
+                {
+                    data["4"]["SkinSeed"] = "0";
+                    data["4"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion GLOCK
+
+                #region AUG
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "AUG")
+                {
+                    data["8"]["SkinSeed"] = "0";
+                    data["8"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion AUG
+
+                #region FAMAS
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FAMAS")
+                {
+                    data["10"]["SkinSeed"] = "0";
+                    data["10"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion FAMAS
+
+                #region G3SG1
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "G3SG1")
+                {
+                    data["11"]["SkinSeed"] = "0";
+                    data["11"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion G3SG1
+
+                #region GALILAR
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "GALILAR")
+                {
+                    data["13"]["SkinSeed"] = "0";
+                    data["13"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion GALILAR
+
+                #region M249
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M249")
+                {
+                    data["14"]["SkinSeed"] = "0";
+                    data["14"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M249
+
+                #region M4A4
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M4A4")
+                {
+                    data["16"]["SkinSeed"] = "0";
+                    data["16"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M4A4
+
+                #region MAC10
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MAC10")
+                {
+                    data["17"]["SkinSeed"] = "0";
+                    data["17"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MAC10
+
+                #region P90
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "P90")
+                {
+                    data["19"]["SkinSeed"] = "0";
+                    data["19"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion P90
+
+                #region UMP45
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "UMP45")
+                {
+                    data["24"]["SkinSeed"] = "0";
+                    data["24"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion UMP45
+
+                #region XM1014
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "XM1014")
+                {
+                    data["25"]["SkinSeed"] = "0";
+                    data["25"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion XM1014
+
+                #region BIZON
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BIZON")
+                {
+                    data["26"]["SkinSeed"] = "0";
+                    data["26"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion BIZON
+
+                #region MAG7
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MAG7")
+                {
+                    data["27"]["SkinSeed"] = "0";
+                    data["27"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MAG7
+
+                #region NEGEV
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "NEGEV")
+                {
+                    data["28"]["SkinSeed"] = "0";
+                    data["28"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion NEGEV
+
+                #region SAWEDOFF
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SAWEDOFF")
+                {
+                    data["29"]["SkinSeed"] = "0";
+                    data["29"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SAWEDOFF
+
+                #region TEC9
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "TEC9")
+                {
+                    data["30"]["SkinSeed"] = "0";
+                    data["30"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion TEC9
+
+                #region P2000
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "P2000")
+                {
+                    data["32"]["SkinSeed"] = "0";
+                    data["32"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion P2000
+
+                #region MP7
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MP7")
+                {
+                    data["33"]["SkinSeed"] = "0";
+                    data["33"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MP7
+
+                #region MP9
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MP9")
+                {
+                    data["34"]["SkinSeed"] = "0";
+                    data["34"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MP9
+
+                #region NOVA
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "NOVA")
+                {
+                    data["35"]["SkinSeed"] = "0";
+                    data["35"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion NOVA
+
+                #region P250
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "P250")
+                {
+                    data["36"]["SkinSeed"] = "0";
+                    data["36"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion P250
+
+                #region SCAR20
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SCAR20")
+                {
+                    data["38"]["SkinSeed"] = "0";
+                    data["38"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SCAR20
+
+                #region SG556
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SG556")
+                {
+                    data["39"]["SkinSeed"] = "0";
+                    data["39"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SG556
+
+                #region SSG08
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SSG08")
+                {
+                    data["40"]["SkinSeed"] = "0";
+                    data["40"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SSG08
+
+                #region M4A1-S
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M4A1-S")
+                {
+                    data["60"]["SkinSeed"] = "0";
+                    data["60"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M4A1-S
+
+                #region USP-S
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "USP-S")
+                {
+                    data["61"]["SkinSeed"] = "0";
+                    data["61"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion USP-S
+
+                #region CZ75A
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "CZ75A")
+                {
+                    data["63"]["SkinSeed"] = "0";
+                    data["63"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion CZ75A
+
+                #region R8-REVOLVER
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "R8-REVOLVER")
+                {
+                    data["64"]["SkinSeed"] = "0";
+                    data["64"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion R8-REVOLVER
+
+                #region BAYONET
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BAYONET")
+                {
+                    data["500"]["SkinSeed"] = "0";
+                    data["500"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion BAYONET
+
+                #region FLIP
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FLIP")
+                {
+                    data["505"]["SkinSeed"] = "0";
+                    data["505"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion FLIP
+
+                #region GUT
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "GUT")
+                {
+                    data["506"]["SkinSeed"] = "0";
+                    data["506"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion GUT
+
+                #region KARAMBIT
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "KARAMBIT")
+                {
+                    data["507"]["SkinSeed"] = "0";
+                    data["507"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion KARAMBIT
+
+                #region M9 BAYONET
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M9 BAYONET")
+                {
+                    data["508"]["SkinSeed"] = "0";
+                    data["508"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M9 BAYONET
+
+                #region HUNTSMAN
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "HUNTSMAN")
+                {
+                    data["509"]["SkinSeed"] = "0";
+                    data["509"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion HUNTSMAN
+
+                #region FALCHION
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FALCHION")
+                {
+                    data["512"]["SkinSeed"] = "0";
+                    data["512"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion FALCHION
+
+                #region BOWIE
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BOWIE")
+                {
+                    data["514"]["SkinSeed"] = "0";
+                    data["514"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion BOWIE
+
+                #region BUTTERFLY
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BUTTERFLY")
+                {
+                    data["515"]["SkinSeed"] = "0";
+                    data["515"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion BUTTERFLY
+
+                #region SHADOW DAGGERS
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SHADOW DAGGERS")
+                {
+                    data["516"]["SkinSeed"] = "0";
+                    data["516"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SHADOW DAGGERS
             }
             else
             {
                 #region AWP
+
                 if (choseweaponcombobox.SelectedItem.ToString() == "AWP")
                 {
-                    data["9"]["SkinSeed"] = "0";
-                    data["9"]["SkinWear"] = "0.000001";
+                    data["9"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["9"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
                     parser.WriteFile("skins.ini", data);
                 }
+
                 #endregion AWP
 
                 #region AK47
+
                 if (choseweaponcombobox.SelectedItem.ToString() == "AK47")
                 {
-                    data["7"]["SkinSeed"] = "0";
-                    data["7"]["SkinWear"] = "0.000001";
+                    data["7"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["7"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
                     parser.WriteFile("skins.ini", data);
                 }
+
                 #endregion AK47
+
+                #region DEAGLE
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "DEAGLE")
+                {
+                    data["1"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["1"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion DEAGLE
+
+                #region DUAL BERETTAS
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "DUAL BERETTAS")
+                {
+                    data["2"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["2"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion DUAL BERETTAS
+
+                #region FIVESEVEN
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FIVESEVEN")
+                {
+                    data["3"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["3"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion FIVESEVEN
+
+                #region GLOCK
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "GLOCK")
+                {
+                    data["4"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["4"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion GLOCK
+
+                #region AUG
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "AUG")
+                {
+                    data["8"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["8"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion AUG
+
+                #region FAMAS
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FAMAS")
+                {
+                    data["10"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["10"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion FAMAS
+
+                #region G3SG1
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "G3SG1")
+                {
+                    data["11"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["11"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion G3SG1
+
+                #region GALILAR
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "GALILAR")
+                {
+                    data["13"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["13"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion GALILAR
+
+                #region M249
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M249")
+                {
+                    data["14"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["14"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M249
+
+                #region M4A4
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M4A4")
+                {
+                    data["16"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["16"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M4A4
+
+                #region MAC10
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MAC10")
+                {
+                    data["17"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["17"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MAC10
+
+                #region P90
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "P90")
+                {
+                    data["19"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["19"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion P90
+
+                #region UMP45
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "UMP45")
+                {
+                    data["24"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["24"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion UMP45
+
+                #region XM1014
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "XM1014")
+                {
+                    data["25"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["25"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion XM1014
+
+                #region BIZON
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BIZON")
+                {
+                    data["26"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["26"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion BIZON
+
+                #region MAG7
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MAG7")
+                {
+                    data["27"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["27"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MAG7
+
+                #region NEGEV
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "NEGEV")
+                {
+                    data["28"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["28"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion NEGEV
+
+                #region SAWEDOFF
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SAWEDOFF")
+                {
+                    data["29"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["29"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SAWEDOFF
+
+                #region TEC9
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "TEC9")
+                {
+                    data["30"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["30"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion TEC9
+
+                #region P2000
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "P2000")
+                {
+                    data["32"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["32"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion P2000
+
+                #region MP7
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MP7")
+                {
+                    data["33"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["33"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MP7
+
+                #region MP9
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MP9")
+                {
+                    data["34"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["34"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion MP9
+
+                #region NOVA
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "NOVA")
+                {
+                    data["35"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["35"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion NOVA
+
+                #region P250
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "P250")
+                {
+                    data["36"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["36"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion P250
+
+                #region SCAR20
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SCAR20")
+                {
+                    data["38"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["38"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SCAR20
+
+                #region SG556
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SG556")
+                {
+                    data["39"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["39"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SG556
+
+                #region SSG08
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SSG08")
+                {
+                    data["40"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["40"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion SSG08
+
+                #region M4A1-S
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M4A1-S")
+                {
+                    data["60"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["60"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M4A1-S
+
+                #region USP-S
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "USP-S")
+                {
+                    data["61"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["61"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion USP-S
+
+                #region CZ75A
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "CZ75A")
+                {
+                    data["63"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["63"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion CZ75A
+
+                #region R8-REVOLVER
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "R8-REVOLVER")
+                {
+                    data["64"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["64"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion R8-REVOLVER
+
+                #region BAYONET
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BAYONET")
+                {
+                    data["500"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["500"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion BAYONET
+
+                #region FLIP
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FLIP")
+                {
+                    data["505"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["505"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion FLIP
+
+                #region GUT
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "GUT")
+                {
+                    data["506"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["506"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion GUT
+
+                #region KARAMBIT
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "KARAMBIT")
+                {
+                    data["507"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["507"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion KARAMBIT
+
+                #region M9 BAYONET
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "M9 BAYONET")
+                {
+                    data["508"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["508"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                #endregion M9 BAYONET
+
+                #region HUNTSMAN
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "HUNTSMAN")
+                {
+                    data["509"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["509"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                # endregion HUNTSMAN
+
+                #region FALCHION
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "FALCHION")
+                {
+                    data["512"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["512"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                # endregion FALCHION
+
+                #region BOWIE
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BOWIE")
+                {
+                    data["514"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["514"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                # endregion BOWIE
+
+                #region BUTTERFLY
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "BUTTERFLY")
+                {
+                    data["515"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["515"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                # endregion BUTTERFLY
+
+                #region SHADOW DAGGERS
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SHADOW DAGGERS")
+                {
+                    data["516"]["SkinSeed"] = skinseedtextbox.Text;
+                    data["516"]["SkinWear"] = "0.0000" + skinweartrackbarprcent.Text;
+                    parser.WriteFile("skins.ini", data);
+                }
+
+                # endregion SHADOW DAGGERS
             }
 
-            MetroMessageBox.Show(this, "Reset Wear for " + choseweaponcombobox.SelectedItem.ToString() + "successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MetroMessageBox.Show(this, "Seed and Wear for " + choseweaponcombobox.SelectedItem + " saved!",
+                "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            FileIniDataParser fileIniData = new FileIniDataParser();
-            IniData parsedData = fileIniData.ReadFile("skins.ini");
+            var fileIniData = new FileIniDataParser();
+            var parsedData = fileIniData.ReadFile("skins.ini");
+            SkinsTextbox.Text = parsedData.ToString();
+        }
+
+        //Reset Wear Button [FINISHED]
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            var parser = new FileIniDataParser();
+            var data = parser.ReadFile("skins.ini");
+
+            if (choseweaponcombobox.SelectedItem == null)
+            {
+                MetroMessageBox.Show(this, "Please Select a Weapon and try again!", "Information", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            #region AWP
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "AWP")
+            {
+                data["9"]["SkinSeed"] = "0";
+                data["9"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion AWP
+
+            #region AK47
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "AK47")
+            {
+                data["7"]["SkinSeed"] = "0";
+                data["7"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion AK47
+
+            #region DEAGLE
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "DEAGLE")
+            {
+                data["1"]["SkinSeed"] = "0";
+                data["1"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion DEAGLE
+
+            #region DUAL BERETTAS
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "DUAL BERETTAS")
+            {
+                data["2"]["SkinSeed"] = "0";
+                data["2"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion DUAL BERETTAS
+
+            #region FIVESEVEN
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "FIVESEVEN")
+            {
+                data["3"]["SkinSeed"] = "0";
+                data["3"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion FIVESEVEN
+
+            #region GLOCK
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "GLOCK")
+            {
+                data["4"]["SkinSeed"] = "0";
+                data["4"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion GLOCK
+
+            #region AUG
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "AUG")
+            {
+                data["8"]["SkinSeed"] = "0";
+                data["8"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion AUG
+
+            #region FAMAS
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "FAMAS")
+            {
+                data["10"]["SkinSeed"] = "0";
+                data["10"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion FAMAS
+
+            #region G3SG1
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "G3SG1")
+            {
+                data["11"]["SkinSeed"] = "0";
+                data["11"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion G3SG1
+
+            #region GALILAR
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "GALILAR")
+            {
+                data["13"]["SkinSeed"] = "0";
+                data["13"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion GALILAR
+
+            #region M249
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "M249")
+            {
+                data["14"]["SkinSeed"] = "0";
+                data["14"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion M249
+
+            #region M4A4
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "M4A4")
+            {
+                data["16"]["SkinSeed"] = "0";
+                data["16"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion M4A4
+
+            #region MAC10
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "MAC10")
+            {
+                data["17"]["SkinSeed"] = "0";
+                data["17"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion MAC10
+
+            #region P90
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "P90")
+            {
+                data["19"]["SkinSeed"] = "0";
+                data["19"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion P90
+
+            #region UMP45
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "UMP45")
+            {
+                data["24"]["SkinSeed"] = "0";
+                data["24"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion UMP45
+
+            #region XM1014
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "XM1014")
+            {
+                data["25"]["SkinSeed"] = "0";
+                data["25"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion XM1014
+
+            #region BIZON
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "BIZON")
+            {
+                data["26"]["SkinSeed"] = "0";
+                data["26"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion BIZON
+
+            #region MAG7
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "MAG7")
+            {
+                data["27"]["SkinSeed"] = "0";
+                data["27"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion MAG7
+
+            #region NEGEV
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "NEGEV")
+            {
+                data["28"]["SkinSeed"] = "0";
+                data["28"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion NEGEV
+
+            #region SAWEDOFF
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "SAWEDOFF")
+            {
+                data["29"]["SkinSeed"] = "0";
+                data["29"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion SAWEDOFF
+
+            #region TEC9
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "TEC9")
+            {
+                data["30"]["SkinSeed"] = "0";
+                data["30"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion TEC9
+
+            #region P2000
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "P2000")
+            {
+                data["32"]["SkinSeed"] = "0";
+                data["32"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion P2000
+
+            #region MP7
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "MP7")
+            {
+                data["33"]["SkinSeed"] = "0";
+                data["33"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion MP7
+
+            #region MP9
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "MP9")
+            {
+                data["34"]["SkinSeed"] = "0";
+                data["34"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion MP9
+
+            #region NOVA
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "NOVA")
+            {
+                data["35"]["SkinSeed"] = "0";
+                data["35"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion NOVA
+
+            #region P250
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "P250")
+            {
+                data["36"]["SkinSeed"] = "0";
+                data["36"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion P250
+
+            #region SCAR20
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "SCAR20")
+            {
+                data["38"]["SkinSeed"] = "0";
+                data["38"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion SCAR20
+
+            #region SG556
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "SG556")
+            {
+                data["39"]["SkinSeed"] = "0";
+                data["39"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion SG556
+
+            #region SSG08
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "SSG08")
+            {
+                data["40"]["SkinSeed"] = "0";
+                data["40"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion SSG08
+
+            #region M4A1-S
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "M4A1-S")
+            {
+                data["60"]["SkinSeed"] = "0";
+                data["60"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion M4A1-S
+
+            #region USP-S
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "USP-S")
+            {
+                data["61"]["SkinSeed"] = "0";
+                data["61"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion USP-S
+
+            #region CZ75A
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "CZ75A")
+            {
+                data["63"]["SkinSeed"] = "0";
+                data["63"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion CZ75A
+
+            #region R8-REVOLVER
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "R8-REVOLVER")
+            {
+                data["64"]["SkinSeed"] = "0";
+                data["64"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion R8-REVOLVER
+
+            #region BAYONET
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "BAYONET")
+            {
+                data["500"]["SkinSeed"] = "0";
+                data["500"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion BAYONET
+
+            #region FLIP
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "FLIP")
+            {
+                data["505"]["SkinSeed"] = "0";
+                data["505"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion FLIP
+
+            #region GUT
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "GUT")
+            {
+                data["506"]["SkinSeed"] = "0";
+                data["506"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion GUT
+
+            #region KARAMBIT
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "KARAMBIT")
+            {
+                data["507"]["SkinSeed"] = "0";
+                data["507"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion KARAMBIT
+
+            #region M9 BAYONET
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "M9 BAYONET")
+            {
+                data["508"]["SkinSeed"] = "0";
+                data["508"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion M9 BAYONET
+
+            #region HUNTSMAN
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "HUNTSMAN")
+            {
+                data["509"]["SkinSeed"] = "0";
+                data["509"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion HUNTSMAN
+
+            #region FALCHION
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "FALCHION")
+            {
+                data["512"]["SkinSeed"] = "0";
+                data["512"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion FALCHION
+
+            #region BOWIE
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "BOWIE")
+            {
+                data["514"]["SkinSeed"] = "0";
+                data["514"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion BOWIE
+
+            #region BUTTERFLY
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "BUTTERFLY")
+            {
+                data["515"]["SkinSeed"] = "0";
+                data["515"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion BUTTERFLY
+
+            #region SHADOW DAGGERS
+
+            if (choseweaponcombobox.SelectedItem.ToString() == "SHADOW DAGGERS")
+            {
+                data["516"]["SkinSeed"] = "0";
+                data["516"]["SkinWear"] = "0.000001";
+                parser.WriteFile("skins.ini", data);
+            }
+
+            #endregion SHADOW DAGGERS
+
+            MetroMessageBox.Show(this, "Reset Wear for " + choseweaponcombobox.SelectedItem + "successful",
+                "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            var fileIniData = new FileIniDataParser();
+            var parsedData = fileIniData.ReadFile("skins.ini");
+            SkinsTextbox.Text = parsedData.ToString();
+        }
+
+        //Reset all Skin Seed's [FINISHED]
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            var parser = new FileIniDataParser();
+            var data = parser.ReadFile("skins.ini");
+
+            data["1"]["SkinSeed"] = "0";
+
+            data["2"]["SkinSeed"] = "0";
+
+            data["3"]["SkinSeed"] = "0";
+
+            data["4"]["SkinSeed"] = "0";
+
+            data["7"]["SkinSeed"] = "0";
+
+            data["8"]["SkinSeed"] = "0";
+
+            data["9"]["SkinSeed"] = "0";
+
+            data["10"]["SkinSeed"] = "0";
+
+            data["11"]["SkinSeed"] = "0";
+
+            data["13"]["SkinSeed"] = "0";
+
+            data["14"]["SkinSeed"] = "0";
+
+            data["16"]["SkinSeed"] = "0";
+
+            data["17"]["SkinSeed"] = "0";
+
+            data["19"]["SkinSeed"] = "0";
+
+            data["24"]["SkinSeed"] = "0";
+
+            data["25"]["SkinSeed"] = "0";
+
+            data["26"]["SkinSeed"] = "0";
+
+            data["27"]["SkinSeed"] = "0";
+
+            data["28"]["SkinSeed"] = "0";
+
+            data["29"]["SkinSeed"] = "0";
+
+            data["30"]["SkinSeed"] = "0";
+
+            data["32"]["SkinSeed"] = "0";
+
+            data["33"]["SkinSeed"] = "0";
+
+            data["34"]["SkinSeed"] = "0";
+
+            data["35"]["SkinSeed"] = "0";
+
+            data["36"]["SkinSeed"] = "0";
+
+            data["38"]["SkinSeed"] = "0";
+
+            data["39"]["SkinSeed"] = "0";
+
+            data["40"]["SkinSeed"] = "0";
+
+            data["60"]["SkinSeed"] = "0";
+
+            data["61"]["SkinSeed"] = "0";
+            
+            data["63"]["SkinSeed"] = "0";
+
+            data["64"]["SkinSeed"] = "0";
+
+            data["500"]["SkinSeed"] = "0";
+
+            data["505"]["SkinSeed"] = "0";
+
+            data["506"]["SkinSeed"] = "0";
+
+            data["507"]["SkinSeed"] = "0";
+
+            data["508"]["SkinSeed"] = "0";
+
+            data["509"]["SkinSeed"] = "0";
+
+            data["512"]["SkinSeed"] = "0";
+
+            data["514"]["SkinSeed"] = "0";
+
+            data["515"]["SkinSeed"] = "0";
+
+            data["516"]["SkinSeed"] = "0";
+
+            //Extra ID's?
+
+            data["49"]["SkinSeed"] = "0";
+
+            data["0"]["SkinSeed"] = "0";
+
+            data["44"]["SkinSeed"] = "0";
+
+            data["48"]["SkinSeed"] = "0";
+
+            data["45"]["SkinSeed"] = "0";
+
+            data["43"]["SkinSeed"] = "0";
+
+            data["46"]["SkinSeed"] = "0";
+
+            data["47"]["SkinSeed"] = "0";
+
+            parser.WriteFile("skins.ini", data);
+
+            var fileIniData = new FileIniDataParser();
+            var parsedData = fileIniData.ReadFile("skins.ini");
+            SkinsTextbox.Text = parsedData.ToString();
+        }
+
+        //Reset all Skin Wear's
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            var parser = new FileIniDataParser();
+            var data = parser.ReadFile("skins.ini");
+
+            data["1"]["SkinWear"] = "0.000001";
+
+            data["2"]["SkinWear"] = "0.000001";
+
+            data["3"]["SkinWear"] = "0.000001";
+
+            data["4"]["SkinWear"] = "0.000001";
+
+            data["7"]["SkinWear"] = "0.000001";
+
+            data["8"]["SkinWear"] = "0.000001";
+
+            data["9"]["SkinWear"] = "0.000001";
+
+            data["10"]["SkinWear"] = "0.000001";
+
+            data["11"]["SkinWear"] = "0.000001";
+
+            data["13"]["SkinWear"] = "0.000001";
+
+            data["14"]["SkinWear"] = "0.000001";
+
+            data["16"]["SkinWear"] = "0.000001";
+
+            data["17"]["SkinWear"] = "0.000001";
+
+            data["19"]["SkinWear"] = "0.000001";
+
+            data["24"]["SkinWear"] = "0.000001";
+
+            data["25"]["SkinWear"] = "0.000001";
+
+            data["26"]["SkinWear"] = "0.000001";
+
+            data["27"]["SkinWear"] = "0.000001";
+
+            data["28"]["SkinWear"] = "0.000001";
+
+            data["29"]["SkinWear"] = "0.000001";
+
+            data["30"]["SkinWear"] = "0.000001";
+
+            data["32"]["SkinWear"] = "0.000001";
+
+            data["33"]["SkinWear"] = "0.000001";
+
+            data["34"]["SkinWear"] = "0.000001";
+
+            data["35"]["SkinWear"] = "0.000001";
+
+            data["36"]["SkinWear"] = "0.000001";
+
+            data["38"]["SkinWear"] = "0.000001";
+
+            data["39"]["SkinWear"] = "0.000001";
+
+            data["40"]["SkinWear"] = "0.000001";
+
+            data["60"]["SkinWear"] = "0.000001";
+
+            data["61"]["SkinWear"] = "0.000001";
+
+            data["63"]["SkinWear"] = "0.000001";
+
+            data["64"]["SkinWear"] = "0.000001";
+
+            data["500"]["SkinWear"] = "0.000001";
+
+            data["505"]["SkinWear"] = "0.000001";
+
+            data["506"]["SkinWear"] = "0.000001";
+
+            data["507"]["SkinWear"] = "0.000001";
+
+            data["508"]["SkinWear"] = "0.000001";
+
+            data["509"]["SkinWear"] = "0.000001";
+
+            data["512"]["SkinWear"] = "0.000001";
+
+            data["514"]["SkinWear"] = "0.000001";
+
+            data["515"]["SkinWear"] = "0.000001";
+
+            data["516"]["SkinWear"] = "0.000001";
+
+            //Extra ID's?
+
+            data["49"]["SkinWear"] = "0.000001";
+
+            data["0"]["SkinWear"] = "0.000001";
+
+            data["44"]["SkinWear"] = "0.000001";
+
+            data["48"]["SkinWear"] = "0.000001";
+
+            data["45"]["SkinWear"] = "0.000001";
+
+            data["43"]["SkinWear"] = "0.000001";
+
+            data["46"]["SkinWear"] = "0.000001";
+
+            data["47"]["SkinWear"] = "0.000001";
+
+            parser.WriteFile("skins.ini", data);
+
+            var fileIniData = new FileIniDataParser();
+            var parsedData = fileIniData.ReadFile("skins.ini");
             SkinsTextbox.Text = parsedData.ToString();
         }
     }

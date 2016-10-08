@@ -11,3 +11,16 @@ C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Release\SkinEditor.exe
 C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Release\SkinEditor.pdb
 C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\INIFileParser.dll
 C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\INIFileParser.xml
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\SkinEditor.exe.config
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\SkinEditor.exe
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\SkinEditor.pdb
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\INIFileParser.dll
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\MetroFramework.Design.dll
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\MetroFramework.dll
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\MetroFramework.Fonts.dll
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\bin\Release\INIFileParser.xml
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\obj\Release\SkinEditor.Form1.resources
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\obj\Release\SkinEditor.Properties.Resources.resources
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\obj\Release\SkinEditor.csproj.GenerateResource.Cache
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\obj\Release\SkinEditor.exe
+F:\RaIN Repos New\ev0-Projects\ev0-Skin-Editor\SkinEditor\obj\Release\SkinEditor.pdb
