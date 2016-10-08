@@ -2502,6 +2502,9 @@ namespace SkinEditor
 
             parser.WriteFile("skins.ini", data);
 
+            MetroMessageBox.Show(this, "Seeds for all Weapons Reset.", "Information", MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+
             var fileIniData = new FileIniDataParser();
             var parsedData = fileIniData.ReadFile("skins.ini");
             SkinsTextbox.Text = parsedData.ToString();
@@ -2618,6 +2621,129 @@ namespace SkinEditor
             data["47"]["SkinWear"] = "0.000001";
 
             parser.WriteFile("skins.ini", data);
+
+            MetroMessageBox.Show(this, "Wears for all Weapons Reset.", "Information", MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+
+            var fileIniData = new FileIniDataParser();
+            var parsedData = fileIniData.ReadFile("skins.ini");
+            SkinsTextbox.Text = parsedData.ToString();
+        }
+
+        //Reset all Skins
+        private void metroButton6_Click(object sender, EventArgs e)
+        {
+            var parser = new FileIniDataParser();
+            var data = parser.ReadFile("skins.ini");
+
+            data["1"]["SkinID"] = "0";
+
+            data["2"]["SkinID"] = "0";
+
+            data["3"]["SkinID"] = "0";
+
+            data["4"]["SkinID"] = "0";
+
+            data["7"]["SkinID"] = "0";
+
+            data["8"]["SkinID"] = "0";
+
+            data["9"]["SkinID"] = "0";
+
+            data["10"]["SkinID"] = "0";
+
+            data["11"]["SkinID"] = "0";
+
+            data["13"]["SkinID"] = "0";
+
+            data["14"]["SkinID"] = "0";
+
+            data["16"]["SkinID"] = "0";
+
+            data["17"]["SkinID"] = "0";
+
+            data["19"]["SkinID"] = "0";
+
+            data["24"]["SkinID"] = "0";
+
+            data["25"]["SkinID"] = "0";
+
+            data["26"]["SkinID"] = "0";
+
+            data["27"]["SkinID"] = "0";
+
+            data["28"]["SkinID"] = "0";
+
+            data["29"]["SkinID"] = "0";
+
+            data["30"]["SkinID"] = "0";
+
+            data["32"]["SkinID"] = "0";
+
+            data["33"]["SkinID"] = "0";
+
+            data["34"]["SkinID"] = "0";
+
+            data["35"]["SkinID"] = "0";
+
+            data["36"]["SkinID"] = "0";
+
+            data["38"]["SkinID"] = "0";
+
+            data["39"]["SkinID"] = "0";
+
+            data["40"]["SkinID"] = "0";
+
+            data["60"]["SkinID"] = "0";
+
+            data["61"]["SkinID"] = "0";
+
+            data["63"]["SkinID"] = "0";
+
+            data["64"]["SkinID"] = "0";
+
+            data["500"]["SkinID"] = "0";
+
+            data["505"]["SkinID"] = "0";
+
+            data["506"]["SkinID"] = "0";
+
+            data["507"]["SkinID"] = "0";
+
+            data["508"]["SkinID"] = "0";
+
+            data["509"]["SkinID"] = "0";
+
+            data["512"]["SkinID"] = "0";
+
+            data["514"]["SkinID"] = "0";
+
+            data["515"]["SkinID"] = "0";
+
+            data["516"]["SkinID"] = "0";
+
+            //Extra ID's?
+
+            data["49"]["SkinID"] = "0";
+
+            data["0"]["SkinID"] = "0";
+
+            data["44"]["SkinID"] = "0";
+
+            data["48"]["SkinID"] = "0";
+
+            data["45"]["SkinID"] = "0";
+
+            data["43"]["SkinID"] = "0";
+
+            data["46"]["SkinID"] = "0";
+
+            data["47"]["SkinID"] = "0";
+
+            parser.WriteFile("skins.ini", data);
+
+            MetroMessageBox.Show(this, "Are you sure that you want to Reset all Weapon Skins?", "Information", MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
             var parsedData = fileIniData.ReadFile("skins.ini");

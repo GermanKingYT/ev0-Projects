@@ -90,6 +90,7 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +101,7 @@
             this.SkinsTextbox.Location = new System.Drawing.Point(703, 48);
             this.SkinsTextbox.Name = "SkinsTextbox";
             this.SkinsTextbox.ReadOnly = true;
-            this.SkinsTextbox.Size = new System.Drawing.Size(234, 397);
+            this.SkinsTextbox.Size = new System.Drawing.Size(234, 362);
             this.SkinsTextbox.TabIndex = 0;
             this.SkinsTextbox.Text = "";
             // 
@@ -1773,8 +1774,8 @@
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(234, 29);
             this.metroButton1.TabIndex = 50;
-            this.metroButton1.Text = "Reset all Seed\'s";
-            this.metroToolTip1.SetToolTip(this.metroButton1, "Resets the Wear to Factory New (0.01)");
+            this.metroButton1.Text = "Reset all Seeds";
+            this.metroToolTip1.SetToolTip(this.metroButton1, "Reset the Seeds for all Weapons");
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
@@ -1784,16 +1785,28 @@
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(234, 29);
             this.metroButton2.TabIndex = 51;
-            this.metroButton2.Text = "Reset all Wear\'s";
-            this.metroToolTip1.SetToolTip(this.metroButton2, "Resets the Wear to Factory New (0.01)");
+            this.metroButton2.Text = "Reset all Wears";
+            this.metroToolTip1.SetToolTip(this.metroButton2, "Reset the Wear for all Weapons");
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroButton6
+            // 
+            this.metroButton6.Location = new System.Drawing.Point(703, 416);
+            this.metroButton6.Name = "metroButton6";
+            this.metroButton6.Size = new System.Drawing.Size(234, 29);
+            this.metroButton6.TabIndex = 52;
+            this.metroButton6.Text = "Reset all Skins";
+            this.metroToolTip1.SetToolTip(this.metroButton6, "Reset the Skins for all Weapons");
+            this.metroButton6.UseSelectable = true;
+            this.metroButton6.Click += new System.EventHandler(this.metroButton6_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 538);
+            this.Controls.Add(this.metroButton6);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel7);
@@ -1883,6 +1896,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton6;
     }
 }
 
