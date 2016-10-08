@@ -7,11 +7,17 @@ ___
 #Features
 ___
 
--Integrated ini-parser [COMPLETE]
+-Integrated ini-parser [FINISHED]
 
 -Preset Patterns [WORK IN PROGRESS]
 
--Edit Seed & Wear | Reset Seed & Wear [COMPLETE]
+-Change Skin for Weapons [WORK IN PROGRESS]
+
+-Edit Seed & Wear | Reset Seed & Wear [FINISHED]
+
+-Reset all Seed's [FINISHED]
+
+-Reset all Wear's [FINISHED]
 
 #To Do
 ___
