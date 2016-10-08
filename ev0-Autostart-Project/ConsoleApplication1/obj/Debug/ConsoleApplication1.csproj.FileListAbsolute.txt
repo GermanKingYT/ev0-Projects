@@ -1,0 +1,11 @@
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\Castle.Core.dll
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\TestStack.White.dll
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\Castle.Core.xml
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\TestStack.White.pdb
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\TestStack.White.xml
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ev0 Autostart.exe.config
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ev0 Autostart.exe
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Debug\ev0 Autostart.pdb
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ev0 Autostart.exe
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Debug\ev0 Autostart.pdb

@@ -1,0 +1,25 @@
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\bin\Debug\ev0 Test.exe.config
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\bin\Debug\ev0 Test.exe
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\bin\Debug\ev0 Test.pdb
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\bin\Debug\MetroFramework.Design.dll
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\bin\Debug\MetroFramework.dll
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\obj\Debug\ev0 Test.csprojResolveAssemblyReference.cache
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\obj\Debug\ev0_Test.Form1.resources
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\obj\Debug\ev0_Test.Properties.Resources.resources
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\obj\Debug\ev0 Test.csproj.GenerateResource.Cache
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\obj\Debug\ev0 Test.exe
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\obj\Debug\ev0 Test.pdb
+C:\Users\RaIN\Desktop\ev0 Test\ev0 Test\bin\Debug\ev0_Editor.exe.config
+F:\RaIN Repos\ev0-Config-Editor\bin\Debug\ev0_Editor.exe.config
+F:\RaIN Repos\ev0-Config-Editor\bin\Debug\ev0_Editor.exe
+F:\RaIN Repos\ev0-Config-Editor\bin\Debug\ev0_Editor.pdb
+F:\RaIN Repos\ev0-Config-Editor\bin\Debug\MetroFramework.Design.dll
+F:\RaIN Repos\ev0-Config-Editor\bin\Debug\MetroFramework.dll
+F:\RaIN Repos\ev0-Config-Editor\bin\Debug\MetroFramework.Fonts.dll
+F:\RaIN Repos\ev0-Config-Editor\obj\Debug\ev0 Test.csprojResolveAssemblyReference.cache
+F:\RaIN Repos\ev0-Config-Editor\obj\Debug\ev0_Test.Form1.resources
+F:\RaIN Repos\ev0-Config-Editor\obj\Debug\ev0_Editor.Properties.Resources.resources
+F:\RaIN Repos\ev0-Config-Editor\obj\Debug\ev0 Test.csproj.GenerateResource.Cache
+F:\RaIN Repos\ev0-Config-Editor\obj\Debug\ev0_Editor.exe
+F:\RaIN Repos\ev0-Config-Editor\obj\Debug\ev0_Editor.pdb

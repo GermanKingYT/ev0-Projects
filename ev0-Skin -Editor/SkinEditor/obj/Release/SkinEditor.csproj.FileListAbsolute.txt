@@ -1,0 +1,13 @@
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\SkinEditor.exe.config
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\SkinEditor.exe
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\SkinEditor.pdb
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\MetroFramework.Design.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\MetroFramework.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\MetroFramework.Fonts.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Release\SkinEditor.Form1.resources
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Release\SkinEditor.Properties.Resources.resources
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Release\SkinEditor.csproj.GenerateResource.Cache
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Release\SkinEditor.exe
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Release\SkinEditor.pdb
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\INIFileParser.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Release\INIFileParser.xml

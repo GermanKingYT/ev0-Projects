@@ -1,0 +1,14 @@
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\SkinEditor.exe.config
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\SkinEditor.exe
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\SkinEditor.pdb
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\MetroFramework.Design.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\MetroFramework.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Debug\SkinEditor.Form1.resources
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Debug\SkinEditor.Properties.Resources.resources
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Debug\SkinEditor.csproj.GenerateResource.Cache
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Debug\SkinEditor.exe
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Debug\SkinEditor.pdb
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\INIFileParser.dll
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\bin\Debug\INIFileParser.xml
+C:\Users\RaIN\Desktop\SkinEditor\SkinEditor\obj\Debug\SkinEditor.csprojResolveAssemblyReference.cache

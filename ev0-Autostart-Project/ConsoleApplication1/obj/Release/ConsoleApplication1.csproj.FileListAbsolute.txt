@@ -1,0 +1,10 @@
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\Castle.Core.dll
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\TestStack.White.dll
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\Castle.Core.xml
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\TestStack.White.pdb
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\TestStack.White.xml
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\ev0 Autostart.exe.config
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\ev0 Autostart.exe
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\bin\Release\ev0 Autostart.pdb
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Release\ev0 Autostart.exe
+C:\Users\RaIN\Desktop\ConsoleApplication1\ConsoleApplication1\obj\Release\ev0 Autostart.pdb
