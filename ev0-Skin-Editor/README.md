@@ -19,6 +19,8 @@ ___
 
 -Reset all Wear's [FINISHED]
 
+-Reset all Skin's [FINISHED]
+
 #To Do
 ___
 
