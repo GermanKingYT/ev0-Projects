@@ -17,3 +17,5 @@ ___
 ___
 
 -Finish Importing all Skins
+
+-Import Preset Patterns
