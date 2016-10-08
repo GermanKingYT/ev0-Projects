@@ -2,7 +2,7 @@
 ___
 
 #Version 2 [In Progress]
-![Preview1](http://i.imgur.com/TntBBsf.png)
+![Preview1](http://i.imgur.com/92F5lKz.png)
 
 #Features
 ___
