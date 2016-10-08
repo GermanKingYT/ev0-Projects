@@ -1,4 +1,4 @@
-# ev0 Skin Config Editor
+#ev0 Skin Config Editor
 ___
 
 #Version 2 [In Progress]
@@ -12,3 +12,8 @@ ___
 -Preset Patterns [WORK IN PROGRESS]
 
 -Edit Seed & Wear | Reset Seed & Wear [COMPLETE]
+
+#To Do
+___
+
+-Finish Importing all Skins
