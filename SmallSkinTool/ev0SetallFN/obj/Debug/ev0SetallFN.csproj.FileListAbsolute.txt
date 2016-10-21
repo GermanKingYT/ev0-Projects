@@ -1,0 +1,11 @@
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\bin\Debug\ev0SetallFN.exe.config
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\bin\Debug\ev0SetallFN.exe
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\bin\Debug\ev0SetallFN.pdb
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.csprojResolveAssemblyReference.cache
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.Form1.resources
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.Properties.Resources.resources
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.csproj.GenerateResource.Cache
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.exe
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.pdb
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\bin\Debug\INIFileParser.dll
+C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\bin\Debug\INIFileParser.xml

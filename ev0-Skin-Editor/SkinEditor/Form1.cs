@@ -22,7 +22,7 @@ namespace SkinEditor
             SkinsTextbox.Text = parsedData.ToString();
         }
 
-        //Chose Weapon Combobox [NOT COMPLETE]
+        //Chose Weapon Combobox [NOT FINISHED]
         private void choseweaponcombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             //AWP
@@ -2510,7 +2510,7 @@ namespace SkinEditor
             SkinsTextbox.Text = parsedData.ToString();
         }
 
-        //Reset all Skin Wear's
+        //Reset all Skin Wear's [FINISHED]
         private void metroButton2_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
@@ -2630,7 +2630,7 @@ namespace SkinEditor
             SkinsTextbox.Text = parsedData.ToString();
         }
 
-        //Reset all Skins
+        //Reset all Skins [FINISHED]
         private void metroButton6_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
