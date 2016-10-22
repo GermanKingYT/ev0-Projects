@@ -16,7 +16,7 @@ namespace SkinEditor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MetroMessageBox.Show(this, "Please Select your Counter Strike Global Offensive Folder!", "Information", MessageBoxButtons.OK,
+            MetroMessageBox.Show(this, "Please Select your Counter Strike Global Offensive Folder!\r\n\r\nSkins Implemented at the moment:\r\n-AWP\r\n-AK47\r\n-DEAGLE\r\n-AUG\r\n-GLOCK", "Information", MessageBoxButtons.OK,
             MessageBoxIcon.Information);
 
             FolderBrowserDialog browser = new FolderBrowserDialog();
