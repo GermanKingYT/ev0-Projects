@@ -51,7 +51,6 @@ namespace ev0SetallFN
                     tempPath = browser.SelectedPath;
                     if (File.Exists(tempPath + @"\ev0lve\skins.ini"))
                     {
-                        MessageBox.Show("skins.ini was Found!\r\nPress OK to Continue");
                         button1.Visible = false;
                         button1.Enabled = false;
 
