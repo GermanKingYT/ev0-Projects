@@ -29,6 +29,10 @@ namespace SkinEditor
                 if (File.Exists(tempPath + @"\ev0lve\skins.ini"))
                 {
                     label1.Text = tempPath + @"\ev0lve\skins.ini";
+
+                    var fileIniData = new FileIniDataParser();
+                    var parsedData = fileIniData.ReadFile(label1.Text);
+                    SkinsTextbox.Text = parsedData.ToString();
                 }
                 else
                 {
@@ -38,12 +42,10 @@ namespace SkinEditor
                 }
             }
 
-
-            var fileIniData = new FileIniDataParser();
-
-            var parsedData = fileIniData.ReadFile(label1.Text);
-
-            SkinsTextbox.Text = parsedData.ToString();
+            if (SkinsTextbox.TextLength == 0)
+            {
+                Close();
+            }
         }
 
         //Chose Weapon Combobox [NOT FINISHED]
