@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using IniParser;
 using MetroFramework;
@@ -15,9 +16,32 @@ namespace SkinEditor
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MetroMessageBox.Show(this, "Please Select your Counter Strike Global Offensive Folder!", "Information", MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+
+            FolderBrowserDialog browser = new FolderBrowserDialog();
+
+            string tempPath = "";
+
+            if (browser.ShowDialog() == DialogResult.OK)
+            {
+                tempPath = browser.SelectedPath;
+                if (File.Exists(tempPath + @"\ev0lve\skins.ini"))
+                {
+                    label1.Text = tempPath + @"\ev0lve\skins.ini";
+                }
+                else
+                {
+                    MetroMessageBox.Show(this, "No skins.ini Found!\r\nMake sure to select your Global Offensive Folder!", "Information", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    Close();
+                }
+            }
+
+
             var fileIniData = new FileIniDataParser();
 
-            var parsedData = fileIniData.ReadFile("skins.ini");
+            var parsedData = fileIniData.ReadFile(label1.Text);
 
             SkinsTextbox.Text = parsedData.ToString();
         }
@@ -527,7 +551,7 @@ namespace SkinEditor
         private void metroButton3_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile(label1.Text);
 
             if (dummycheckbox.Visible)
             {
@@ -550,97 +574,97 @@ namespace SkinEditor
                         if (awpselectskincheckbox.SelectedItem.ToString() == "BOOM")
                         {
                             data["9"]["SkinID"] = "174";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Dragon Lore")
                         {
                             data["9"]["SkinID"] = "344";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Forest DDPAT")
                         {
                             data["9"]["SkinID"] = "5";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Pink DDPAT")
                         {
                             data["9"]["SkinID"] = "84";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Snake Camo")
                         {
                             data["9"]["SkinID"] = "30";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Lightning Strike")
                         {
                             data["9"]["SkinID"] = "51";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Safari Mesh")
                         {
                             data["9"]["SkinID"] = "72";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Corticera")
                         {
                             data["9"]["SkinID"] = "181";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Redline")
                         {
                             data["9"]["SkinID"] = "259";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Man-o\'-war")
                         {
                             data["9"]["SkinID"] = "395";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Graphite1")
                         {
                             data["9"]["SkinID"] = "212";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Graphite2")
                         {
                             data["9"]["SkinID"] = "214";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Electric Hive")
                         {
                             data["9"]["SkinID"] = "227";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Pit Viper")
                         {
                             data["9"]["SkinID"] = "251";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Asiimov")
                         {
                             data["9"]["SkinID"] = "279";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Worm God")
                         {
                             data["9"]["SkinID"] = "424";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Medusa")
                         {
                             data["9"]["SkinID"] = "446";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Sun in Leo")
                         {
                             data["9"]["SkinID"] = "451";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (awpselectskincheckbox.SelectedItem.ToString() == "Hyper Beast")
                         {
                             data["9"]["SkinID"] = "475";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                     }
 
@@ -660,122 +684,122 @@ namespace SkinEditor
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Aquamarine Revenge")
                         {
                             data["7"]["SkinID"] = "474";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Black Laminate")
                         {
                             data["7"]["SkinID"] = "172";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Blue Laminate")
                         {
                             data["7"]["SkinID"] = "226";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Cartel")
                         {
                             data["7"]["SkinID"] = "394";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Case Hardened")
                         {
                             data["7"]["SkinID"] = "44";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Contrast Spray")
                         {
                             data["7"]["SkinID"] = "22";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Elite Build")
                         {
                             data["7"]["SkinID"] = "422";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Emerald Pinstripe")
                         {
                             data["7"]["SkinID"] = "300";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Fire Serpent")
                         {
                             data["7"]["SkinID"] = "180";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "First Class")
                         {
                             data["7"]["SkinID"] = "341";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Frontside Misty")
                         {
                             data["7"]["SkinID"] = "490";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Fuel Injector")
                         {
                             data["7"]["SkinID"] = "524";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Hydroponic")
                         {
                             data["7"]["SkinID"] = "456";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Jaguar")
                         {
                             data["7"]["SkinID"] = "316";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Jet Set")
                         {
                             data["7"]["SkinID"] = "340";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Jungle Spray")
                         {
                             data["7"]["SkinID"] = "122";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Neon Revolution")
                         {
                             data["7"]["SkinID"] = "600";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Point Disarray")
                         {
                             data["7"]["SkinID"] = "506";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Predator")
                         {
                             data["7"]["SkinID"] = "170";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Red Laminate")
                         {
                             data["7"]["SkinID"] = "14";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Redline")
                         {
                             data["7"]["SkinID"] = "282";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Safari Mesh")
                         {
                             data["7"]["SkinID"] = "72";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Vulcan")
                         {
                             data["7"]["SkinID"] = "302";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (ak47skinselectioncombobox.SelectedItem.ToString() == "Wasteland Rebel")
                         {
                             data["7"]["SkinID"] = "380";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                     }
 
@@ -795,122 +819,122 @@ namespace SkinEditor
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Blaze")
                         {
                             data["1"]["SkinID"] = "37";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Bronze Deco")
                         {
                             data["1"]["SkinID"] = "425";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Cobalt Disruption")
                         {
                             data["1"]["SkinID"] = "231";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Conspiracy")
                         {
                             data["1"]["SkinID"] = "351";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Corinthian")
                         {
                             data["1"]["SkinID"] = "509";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Crimson Web")
                         {
                             data["1"]["SkinID"] = "232";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Directive")
                         {
                             data["1"]["SkinID"] = "603";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Forest DDPAT")
                         {
                             data["1"]["SkinID"] = "5";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Golden Koi")
                         {
                             data["1"]["SkinID"] = "185";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Hand Cannon")
                         {
                             data["1"]["SkinID"] = "328";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Heirloom")
                         {
                             data["1"]["SkinID"] = "273";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Hypnotic")
                         {
                             data["1"]["SkinID"] = "61";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Kumicho Dragon")
                         {
                             data["1"]["SkinID"] = "527";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Meteorite")
                         {
                             data["1"]["SkinID"] = "296";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Midnight Storm")
                         {
                             data["1"]["SkinID"] = "468";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Mudder")
                         {
                             data["1"]["SkinID"] = "90";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Naga")
                         {
                             data["1"]["SkinID"] = "397";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Night")
                         {
                             data["1"]["SkinID"] = "40";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Pilot")
                         {
                             data["1"]["SkinID"] = "347";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Sunset Storm 1")
                         {
                             data["1"]["SkinID"] = "469";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Sunset Storm 2")
                         {
                             data["1"]["SkinID"] = "470";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Urban DDPAT")
                         {
                             data["1"]["SkinID"] = "17";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "Urban Rubble")
                         {
                             data["1"]["SkinID"] = "237";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (deagleselectskincheckbox.SelectedItem.ToString() == "VariCamo")
                         {
                             data["1"]["SkinID"] = "235";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                     }
 
@@ -930,117 +954,232 @@ namespace SkinEditor
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Akihabara Accept")
                         {
                             data["8"]["SkinID"] = "455";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Anodized Navy 1")
                         {
                             data["8"]["SkinID"] = "28";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Anodized Navy 2")
                         {
                             data["8"]["SkinID"] = "197";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Aristocrat")
                         {
                             data["8"]["SkinID"] = "583";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Asterion")
                         {
                             data["8"]["SkinID"] = "442";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Bengal Tiger")
                         {
                             data["8"]["SkinID"] = "9";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Chameleon")
                         {
                             data["8"]["SkinID"] = "280";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Colony")
                         {
                             data["8"]["SkinID"] = "47";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Condemned")
                         {
                             data["8"]["SkinID"] = "110";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Contractor")
                         {
                             data["8"]["SkinID"] = "46";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Copperhead")
                         {
                             data["8"]["SkinID"] = "10";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Daedalus")
                         {
                             data["8"]["SkinID"] = "444";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Fleet Flock")
                         {
                             data["8"]["SkinID"] = "541";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Hot Rod")
                         {
                             data["8"]["SkinID"] = "33";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Radiation Hazard 1")
                         {
                             data["8"]["SkinID"] = "167";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Radiation Hazard 2")
                         {
                             data["8"]["SkinID"] = "375";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Ricochet")
                         {
                             data["8"]["SkinID"] = "507";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Storm")
                         {
                             data["8"]["SkinID"] = "100";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Syd Mead")
                         {
                             data["8"]["SkinID"] = "601";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Torque")
                         {
                             data["8"]["SkinID"] = "305";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                         if (augskinselectioncheckbox.SelectedItem.ToString() == "Wings")
                         {
                             data["8"]["SkinID"] = "73";
-                            parser.WriteFile("skins.ini", data);
+                            parser.WriteFile(label1.Text, data);
                         }
                     }
 
                 #endregion AUG
 
+                #region GLOCK
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "GLOCK")
+                    if (selectskinglockcombobox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Blue Fissure")
+                        {
+                            data["4"]["SkinID"] = "278";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Brass")
+                        {
+                            data["4"]["SkinID"] = "159";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Bunsen Burner")
+                        {
+                            data["4"]["SkinID"] = "479";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Candy Apple")
+                        {
+                            data["4"]["SkinID"] = "3";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Catacombs")
+                        {
+                            data["4"]["SkinID"] = "399";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Death Rattle")
+                        {
+                            data["4"]["SkinID"] = "293";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Dragon Tattoo")
+                        {
+                            data["4"]["SkinID"] = "48";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Fade")
+                        {
+                            data["4"]["SkinID"] = "38";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Grinder")
+                        {
+                            data["4"]["SkinID"] = "381";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Groundwater")
+                        {
+                            data["4"]["SkinID"] = "2";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Night")
+                        {
+                            data["4"]["SkinID"] = "40";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Reactor")
+                        {
+                            data["4"]["SkinID"] = "367";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Royal Legion")
+                        {
+                            data["4"]["SkinID"] = "532";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Sand Dune1")
+                        {
+                            data["4"]["SkinID"] = "99";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Sand Dune2")
+                        {
+                            data["4"]["SkinID"] = "208";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Steel Disruption")
+                        {
+                            data["4"]["SkinID"] = "230";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Twilight Galaxy")
+                        {
+                            data["4"]["SkinID"] = "437";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Wasteland Rebel")
+                        {
+                            data["4"]["SkinID"] = "586";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Water Elemental")
+                        {
+                            data["4"]["SkinID"] = "353";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinglockcombobox.SelectedItem.ToString() == "Weasel")
+                        {
+                            data["4"]["SkinID"] = "607";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion GLOCK
+
                 MetroMessageBox.Show(this, "Skin for " + choseweaponcombobox.SelectedItem + " saved!", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 var fileIniData = new FileIniDataParser();
-                var parsedData = fileIniData.ReadFile("skins.ini");
+                var parsedData = fileIniData.ReadFile(label1.Text);
                 SkinsTextbox.Text = parsedData.ToString();
             }
         }
@@ -1049,7 +1188,7 @@ namespace SkinEditor
         private void metroButton4_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile(label1.Text);
 
             if (choseweaponcombobox.SelectedItem == null)
             {
@@ -1065,7 +1204,7 @@ namespace SkinEditor
                 {
                     data["9"]["SkinSeed"] = "0";
                     data["9"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion AWP
@@ -1076,7 +1215,7 @@ namespace SkinEditor
                 {
                     data["7"]["SkinSeed"] = "0";
                     data["7"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion AK47
@@ -1087,7 +1226,7 @@ namespace SkinEditor
                 {
                     data["1"]["SkinSeed"] = "0";
                     data["1"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion DEAGLE
@@ -1098,7 +1237,7 @@ namespace SkinEditor
                 {
                     data["2"]["SkinSeed"] = "0";
                     data["2"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion DUAL BERETTAS
@@ -1109,7 +1248,7 @@ namespace SkinEditor
                 {
                     data["3"]["SkinSeed"] = "0";
                     data["3"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion FIVESEVEN
@@ -1120,7 +1259,7 @@ namespace SkinEditor
                 {
                     data["4"]["SkinSeed"] = "0";
                     data["4"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion GLOCK
@@ -1131,7 +1270,7 @@ namespace SkinEditor
                 {
                     data["8"]["SkinSeed"] = "0";
                     data["8"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion AUG
@@ -1142,7 +1281,7 @@ namespace SkinEditor
                 {
                     data["10"]["SkinSeed"] = "0";
                     data["10"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion FAMAS
@@ -1153,7 +1292,7 @@ namespace SkinEditor
                 {
                     data["11"]["SkinSeed"] = "0";
                     data["11"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion G3SG1
@@ -1164,7 +1303,7 @@ namespace SkinEditor
                 {
                     data["13"]["SkinSeed"] = "0";
                     data["13"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion GALILAR
@@ -1175,7 +1314,7 @@ namespace SkinEditor
                 {
                     data["14"]["SkinSeed"] = "0";
                     data["14"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M249
@@ -1186,7 +1325,7 @@ namespace SkinEditor
                 {
                     data["16"]["SkinSeed"] = "0";
                     data["16"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M4A4
@@ -1197,7 +1336,7 @@ namespace SkinEditor
                 {
                     data["17"]["SkinSeed"] = "0";
                     data["17"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MAC10
@@ -1208,7 +1347,7 @@ namespace SkinEditor
                 {
                     data["19"]["SkinSeed"] = "0";
                     data["19"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion P90
@@ -1219,7 +1358,7 @@ namespace SkinEditor
                 {
                     data["24"]["SkinSeed"] = "0";
                     data["24"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion UMP45
@@ -1230,7 +1369,7 @@ namespace SkinEditor
                 {
                     data["25"]["SkinSeed"] = "0";
                     data["25"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion XM1014
@@ -1241,7 +1380,7 @@ namespace SkinEditor
                 {
                     data["26"]["SkinSeed"] = "0";
                     data["26"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion BIZON
@@ -1252,7 +1391,7 @@ namespace SkinEditor
                 {
                     data["27"]["SkinSeed"] = "0";
                     data["27"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MAG7
@@ -1263,7 +1402,7 @@ namespace SkinEditor
                 {
                     data["28"]["SkinSeed"] = "0";
                     data["28"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion NEGEV
@@ -1274,7 +1413,7 @@ namespace SkinEditor
                 {
                     data["29"]["SkinSeed"] = "0";
                     data["29"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SAWEDOFF
@@ -1285,7 +1424,7 @@ namespace SkinEditor
                 {
                     data["30"]["SkinSeed"] = "0";
                     data["30"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion TEC9
@@ -1296,7 +1435,7 @@ namespace SkinEditor
                 {
                     data["32"]["SkinSeed"] = "0";
                     data["32"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion P2000
@@ -1307,7 +1446,7 @@ namespace SkinEditor
                 {
                     data["33"]["SkinSeed"] = "0";
                     data["33"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MP7
@@ -1318,7 +1457,7 @@ namespace SkinEditor
                 {
                     data["34"]["SkinSeed"] = "0";
                     data["34"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MP9
@@ -1329,7 +1468,7 @@ namespace SkinEditor
                 {
                     data["35"]["SkinSeed"] = "0";
                     data["35"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion NOVA
@@ -1340,7 +1479,7 @@ namespace SkinEditor
                 {
                     data["36"]["SkinSeed"] = "0";
                     data["36"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion P250
@@ -1351,7 +1490,7 @@ namespace SkinEditor
                 {
                     data["38"]["SkinSeed"] = "0";
                     data["38"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SCAR20
@@ -1362,7 +1501,7 @@ namespace SkinEditor
                 {
                     data["39"]["SkinSeed"] = "0";
                     data["39"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SG556
@@ -1373,7 +1512,7 @@ namespace SkinEditor
                 {
                     data["40"]["SkinSeed"] = "0";
                     data["40"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SSG08
@@ -1384,7 +1523,7 @@ namespace SkinEditor
                 {
                     data["60"]["SkinSeed"] = "0";
                     data["60"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M4A1-S
@@ -1395,7 +1534,7 @@ namespace SkinEditor
                 {
                     data["61"]["SkinSeed"] = "0";
                     data["61"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion USP-S
@@ -1406,7 +1545,7 @@ namespace SkinEditor
                 {
                     data["63"]["SkinSeed"] = "0";
                     data["63"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion CZ75A
@@ -1417,7 +1556,7 @@ namespace SkinEditor
                 {
                     data["64"]["SkinSeed"] = "0";
                     data["64"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion R8-REVOLVER
@@ -1428,7 +1567,7 @@ namespace SkinEditor
                 {
                     data["500"]["SkinSeed"] = "0";
                     data["500"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion BAYONET
@@ -1439,7 +1578,7 @@ namespace SkinEditor
                 {
                     data["505"]["SkinSeed"] = "0";
                     data["505"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion FLIP
@@ -1450,7 +1589,7 @@ namespace SkinEditor
                 {
                     data["506"]["SkinSeed"] = "0";
                     data["506"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion GUT
@@ -1461,7 +1600,7 @@ namespace SkinEditor
                 {
                     data["507"]["SkinSeed"] = "0";
                     data["507"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion KARAMBIT
@@ -1472,7 +1611,7 @@ namespace SkinEditor
                 {
                     data["508"]["SkinSeed"] = "0";
                     data["508"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M9 BAYONET
@@ -1483,7 +1622,7 @@ namespace SkinEditor
                 {
                     data["509"]["SkinSeed"] = "0";
                     data["509"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion HUNTSMAN
@@ -1494,7 +1633,7 @@ namespace SkinEditor
                 {
                     data["512"]["SkinSeed"] = "0";
                     data["512"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion FALCHION
@@ -1505,7 +1644,7 @@ namespace SkinEditor
                 {
                     data["514"]["SkinSeed"] = "0";
                     data["514"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion BOWIE
@@ -1516,7 +1655,7 @@ namespace SkinEditor
                 {
                     data["515"]["SkinSeed"] = "0";
                     data["515"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion BUTTERFLY
@@ -1527,7 +1666,7 @@ namespace SkinEditor
                 {
                     data["516"]["SkinSeed"] = "0";
                     data["516"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SHADOW DAGGERS
@@ -1540,7 +1679,7 @@ namespace SkinEditor
                 {
                     data["9"]["SkinSeed"] = skinseedtextbox.Text;
                     data["9"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion AWP
@@ -1551,7 +1690,7 @@ namespace SkinEditor
                 {
                     data["7"]["SkinSeed"] = skinseedtextbox.Text;
                     data["7"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion AK47
@@ -1562,7 +1701,7 @@ namespace SkinEditor
                 {
                     data["1"]["SkinSeed"] = skinseedtextbox.Text;
                     data["1"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion DEAGLE
@@ -1573,7 +1712,7 @@ namespace SkinEditor
                 {
                     data["2"]["SkinSeed"] = skinseedtextbox.Text;
                     data["2"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion DUAL BERETTAS
@@ -1584,7 +1723,7 @@ namespace SkinEditor
                 {
                     data["3"]["SkinSeed"] = skinseedtextbox.Text;
                     data["3"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion FIVESEVEN
@@ -1595,7 +1734,7 @@ namespace SkinEditor
                 {
                     data["4"]["SkinSeed"] = skinseedtextbox.Text;
                     data["4"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion GLOCK
@@ -1606,7 +1745,7 @@ namespace SkinEditor
                 {
                     data["8"]["SkinSeed"] = skinseedtextbox.Text;
                     data["8"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion AUG
@@ -1617,7 +1756,7 @@ namespace SkinEditor
                 {
                     data["10"]["SkinSeed"] = skinseedtextbox.Text;
                     data["10"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion FAMAS
@@ -1628,7 +1767,7 @@ namespace SkinEditor
                 {
                     data["11"]["SkinSeed"] = skinseedtextbox.Text;
                     data["11"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion G3SG1
@@ -1639,7 +1778,7 @@ namespace SkinEditor
                 {
                     data["13"]["SkinSeed"] = skinseedtextbox.Text;
                     data["13"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion GALILAR
@@ -1650,7 +1789,7 @@ namespace SkinEditor
                 {
                     data["14"]["SkinSeed"] = skinseedtextbox.Text;
                     data["14"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M249
@@ -1661,7 +1800,7 @@ namespace SkinEditor
                 {
                     data["16"]["SkinSeed"] = skinseedtextbox.Text;
                     data["16"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M4A4
@@ -1672,7 +1811,7 @@ namespace SkinEditor
                 {
                     data["17"]["SkinSeed"] = skinseedtextbox.Text;
                     data["17"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MAC10
@@ -1683,7 +1822,7 @@ namespace SkinEditor
                 {
                     data["19"]["SkinSeed"] = skinseedtextbox.Text;
                     data["19"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion P90
@@ -1694,7 +1833,7 @@ namespace SkinEditor
                 {
                     data["24"]["SkinSeed"] = skinseedtextbox.Text;
                     data["24"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion UMP45
@@ -1705,7 +1844,7 @@ namespace SkinEditor
                 {
                     data["25"]["SkinSeed"] = skinseedtextbox.Text;
                     data["25"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion XM1014
@@ -1716,7 +1855,7 @@ namespace SkinEditor
                 {
                     data["26"]["SkinSeed"] = skinseedtextbox.Text;
                     data["26"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion BIZON
@@ -1727,7 +1866,7 @@ namespace SkinEditor
                 {
                     data["27"]["SkinSeed"] = skinseedtextbox.Text;
                     data["27"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MAG7
@@ -1738,7 +1877,7 @@ namespace SkinEditor
                 {
                     data["28"]["SkinSeed"] = skinseedtextbox.Text;
                     data["28"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion NEGEV
@@ -1749,7 +1888,7 @@ namespace SkinEditor
                 {
                     data["29"]["SkinSeed"] = skinseedtextbox.Text;
                     data["29"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SAWEDOFF
@@ -1760,7 +1899,7 @@ namespace SkinEditor
                 {
                     data["30"]["SkinSeed"] = skinseedtextbox.Text;
                     data["30"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion TEC9
@@ -1771,7 +1910,7 @@ namespace SkinEditor
                 {
                     data["32"]["SkinSeed"] = skinseedtextbox.Text;
                     data["32"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion P2000
@@ -1782,7 +1921,7 @@ namespace SkinEditor
                 {
                     data["33"]["SkinSeed"] = skinseedtextbox.Text;
                     data["33"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MP7
@@ -1793,7 +1932,7 @@ namespace SkinEditor
                 {
                     data["34"]["SkinSeed"] = skinseedtextbox.Text;
                     data["34"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion MP9
@@ -1804,7 +1943,7 @@ namespace SkinEditor
                 {
                     data["35"]["SkinSeed"] = skinseedtextbox.Text;
                     data["35"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion NOVA
@@ -1815,7 +1954,7 @@ namespace SkinEditor
                 {
                     data["36"]["SkinSeed"] = skinseedtextbox.Text;
                     data["36"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion P250
@@ -1826,7 +1965,7 @@ namespace SkinEditor
                 {
                     data["38"]["SkinSeed"] = skinseedtextbox.Text;
                     data["38"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SCAR20
@@ -1837,7 +1976,7 @@ namespace SkinEditor
                 {
                     data["39"]["SkinSeed"] = skinseedtextbox.Text;
                     data["39"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SG556
@@ -1848,7 +1987,7 @@ namespace SkinEditor
                 {
                     data["40"]["SkinSeed"] = skinseedtextbox.Text;
                     data["40"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion SSG08
@@ -1859,7 +1998,7 @@ namespace SkinEditor
                 {
                     data["60"]["SkinSeed"] = skinseedtextbox.Text;
                     data["60"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M4A1-S
@@ -1870,7 +2009,7 @@ namespace SkinEditor
                 {
                     data["61"]["SkinSeed"] = skinseedtextbox.Text;
                     data["61"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion USP-S
@@ -1881,7 +2020,7 @@ namespace SkinEditor
                 {
                     data["63"]["SkinSeed"] = skinseedtextbox.Text;
                     data["63"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion CZ75A
@@ -1892,7 +2031,7 @@ namespace SkinEditor
                 {
                     data["64"]["SkinSeed"] = skinseedtextbox.Text;
                     data["64"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion R8-REVOLVER
@@ -1903,7 +2042,7 @@ namespace SkinEditor
                 {
                     data["500"]["SkinSeed"] = skinseedtextbox.Text;
                     data["500"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion BAYONET
@@ -1914,7 +2053,7 @@ namespace SkinEditor
                 {
                     data["505"]["SkinSeed"] = skinseedtextbox.Text;
                     data["505"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion FLIP
@@ -1925,7 +2064,7 @@ namespace SkinEditor
                 {
                     data["506"]["SkinSeed"] = skinseedtextbox.Text;
                     data["506"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion GUT
@@ -1936,7 +2075,7 @@ namespace SkinEditor
                 {
                     data["507"]["SkinSeed"] = skinseedtextbox.Text;
                     data["507"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion KARAMBIT
@@ -1947,7 +2086,7 @@ namespace SkinEditor
                 {
                     data["508"]["SkinSeed"] = skinseedtextbox.Text;
                     data["508"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 #endregion M9 BAYONET
@@ -1958,7 +2097,7 @@ namespace SkinEditor
                 {
                     data["509"]["SkinSeed"] = skinseedtextbox.Text;
                     data["509"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 # endregion HUNTSMAN
@@ -1969,7 +2108,7 @@ namespace SkinEditor
                 {
                     data["512"]["SkinSeed"] = skinseedtextbox.Text;
                     data["512"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 # endregion FALCHION
@@ -1980,7 +2119,7 @@ namespace SkinEditor
                 {
                     data["514"]["SkinSeed"] = skinseedtextbox.Text;
                     data["514"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 # endregion BOWIE
@@ -1991,7 +2130,7 @@ namespace SkinEditor
                 {
                     data["515"]["SkinSeed"] = skinseedtextbox.Text;
                     data["515"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 # endregion BUTTERFLY
@@ -2002,7 +2141,7 @@ namespace SkinEditor
                 {
                     data["516"]["SkinSeed"] = skinseedtextbox.Text;
                     data["516"]["SkinWear"] = "0." + skinweartrackbarprcent.Text + "0000";
-                    parser.WriteFile("skins.ini", data);
+                    parser.WriteFile(label1.Text, data);
                 }
 
                 # endregion SHADOW DAGGERS
@@ -2012,7 +2151,7 @@ namespace SkinEditor
                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
-            var parsedData = fileIniData.ReadFile("skins.ini");
+            var parsedData = fileIniData.ReadFile(label1.Text);
             SkinsTextbox.Text = parsedData.ToString();
         }
 
@@ -2020,7 +2159,7 @@ namespace SkinEditor
         private void metroButton5_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile(label1.Text);
 
             if (choseweaponcombobox.SelectedItem == null)
             {
@@ -2035,7 +2174,7 @@ namespace SkinEditor
             {
                 data["9"]["SkinSeed"] = "0";
                 data["9"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion AWP
@@ -2046,7 +2185,7 @@ namespace SkinEditor
             {
                 data["7"]["SkinSeed"] = "0";
                 data["7"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion AK47
@@ -2057,7 +2196,7 @@ namespace SkinEditor
             {
                 data["1"]["SkinSeed"] = "0";
                 data["1"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion DEAGLE
@@ -2068,7 +2207,7 @@ namespace SkinEditor
             {
                 data["2"]["SkinSeed"] = "0";
                 data["2"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion DUAL BERETTAS
@@ -2079,7 +2218,7 @@ namespace SkinEditor
             {
                 data["3"]["SkinSeed"] = "0";
                 data["3"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion FIVESEVEN
@@ -2090,7 +2229,7 @@ namespace SkinEditor
             {
                 data["4"]["SkinSeed"] = "0";
                 data["4"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion GLOCK
@@ -2101,7 +2240,7 @@ namespace SkinEditor
             {
                 data["8"]["SkinSeed"] = "0";
                 data["8"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion AUG
@@ -2112,7 +2251,7 @@ namespace SkinEditor
             {
                 data["10"]["SkinSeed"] = "0";
                 data["10"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion FAMAS
@@ -2123,7 +2262,7 @@ namespace SkinEditor
             {
                 data["11"]["SkinSeed"] = "0";
                 data["11"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion G3SG1
@@ -2134,7 +2273,7 @@ namespace SkinEditor
             {
                 data["13"]["SkinSeed"] = "0";
                 data["13"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion GALILAR
@@ -2145,7 +2284,7 @@ namespace SkinEditor
             {
                 data["14"]["SkinSeed"] = "0";
                 data["14"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion M249
@@ -2156,7 +2295,7 @@ namespace SkinEditor
             {
                 data["16"]["SkinSeed"] = "0";
                 data["16"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion M4A4
@@ -2167,7 +2306,7 @@ namespace SkinEditor
             {
                 data["17"]["SkinSeed"] = "0";
                 data["17"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion MAC10
@@ -2178,7 +2317,7 @@ namespace SkinEditor
             {
                 data["19"]["SkinSeed"] = "0";
                 data["19"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion P90
@@ -2189,7 +2328,7 @@ namespace SkinEditor
             {
                 data["24"]["SkinSeed"] = "0";
                 data["24"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion UMP45
@@ -2200,7 +2339,7 @@ namespace SkinEditor
             {
                 data["25"]["SkinSeed"] = "0";
                 data["25"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion XM1014
@@ -2211,7 +2350,7 @@ namespace SkinEditor
             {
                 data["26"]["SkinSeed"] = "0";
                 data["26"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion BIZON
@@ -2222,7 +2361,7 @@ namespace SkinEditor
             {
                 data["27"]["SkinSeed"] = "0";
                 data["27"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion MAG7
@@ -2233,7 +2372,7 @@ namespace SkinEditor
             {
                 data["28"]["SkinSeed"] = "0";
                 data["28"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion NEGEV
@@ -2244,7 +2383,7 @@ namespace SkinEditor
             {
                 data["29"]["SkinSeed"] = "0";
                 data["29"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion SAWEDOFF
@@ -2255,7 +2394,7 @@ namespace SkinEditor
             {
                 data["30"]["SkinSeed"] = "0";
                 data["30"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion TEC9
@@ -2266,7 +2405,7 @@ namespace SkinEditor
             {
                 data["32"]["SkinSeed"] = "0";
                 data["32"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion P2000
@@ -2277,7 +2416,7 @@ namespace SkinEditor
             {
                 data["33"]["SkinSeed"] = "0";
                 data["33"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion MP7
@@ -2288,7 +2427,7 @@ namespace SkinEditor
             {
                 data["34"]["SkinSeed"] = "0";
                 data["34"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion MP9
@@ -2299,7 +2438,7 @@ namespace SkinEditor
             {
                 data["35"]["SkinSeed"] = "0";
                 data["35"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion NOVA
@@ -2310,7 +2449,7 @@ namespace SkinEditor
             {
                 data["36"]["SkinSeed"] = "0";
                 data["36"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion P250
@@ -2321,7 +2460,7 @@ namespace SkinEditor
             {
                 data["38"]["SkinSeed"] = "0";
                 data["38"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion SCAR20
@@ -2332,7 +2471,7 @@ namespace SkinEditor
             {
                 data["39"]["SkinSeed"] = "0";
                 data["39"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion SG556
@@ -2343,7 +2482,7 @@ namespace SkinEditor
             {
                 data["40"]["SkinSeed"] = "0";
                 data["40"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion SSG08
@@ -2354,7 +2493,7 @@ namespace SkinEditor
             {
                 data["60"]["SkinSeed"] = "0";
                 data["60"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion M4A1-S
@@ -2365,7 +2504,7 @@ namespace SkinEditor
             {
                 data["61"]["SkinSeed"] = "0";
                 data["61"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion USP-S
@@ -2376,7 +2515,7 @@ namespace SkinEditor
             {
                 data["63"]["SkinSeed"] = "0";
                 data["63"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion CZ75A
@@ -2387,7 +2526,7 @@ namespace SkinEditor
             {
                 data["64"]["SkinSeed"] = "0";
                 data["64"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion R8-REVOLVER
@@ -2398,7 +2537,7 @@ namespace SkinEditor
             {
                 data["500"]["SkinSeed"] = "0";
                 data["500"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion BAYONET
@@ -2409,7 +2548,7 @@ namespace SkinEditor
             {
                 data["505"]["SkinSeed"] = "0";
                 data["505"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion FLIP
@@ -2420,7 +2559,7 @@ namespace SkinEditor
             {
                 data["506"]["SkinSeed"] = "0";
                 data["506"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion GUT
@@ -2431,7 +2570,7 @@ namespace SkinEditor
             {
                 data["507"]["SkinSeed"] = "0";
                 data["507"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion KARAMBIT
@@ -2442,7 +2581,7 @@ namespace SkinEditor
             {
                 data["508"]["SkinSeed"] = "0";
                 data["508"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion M9 BAYONET
@@ -2453,7 +2592,7 @@ namespace SkinEditor
             {
                 data["509"]["SkinSeed"] = "0";
                 data["509"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion HUNTSMAN
@@ -2464,7 +2603,7 @@ namespace SkinEditor
             {
                 data["512"]["SkinSeed"] = "0";
                 data["512"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion FALCHION
@@ -2475,7 +2614,7 @@ namespace SkinEditor
             {
                 data["514"]["SkinSeed"] = "0";
                 data["514"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion BOWIE
@@ -2486,7 +2625,7 @@ namespace SkinEditor
             {
                 data["515"]["SkinSeed"] = "0";
                 data["515"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion BUTTERFLY
@@ -2497,7 +2636,7 @@ namespace SkinEditor
             {
                 data["516"]["SkinSeed"] = "0";
                 data["516"]["SkinWear"] = "0.000001";
-                parser.WriteFile("skins.ini", data);
+                parser.WriteFile(label1.Text, data);
             }
 
             #endregion SHADOW DAGGERS
@@ -2506,7 +2645,7 @@ namespace SkinEditor
                 "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
-            var parsedData = fileIniData.ReadFile("skins.ini");
+            var parsedData = fileIniData.ReadFile(label1.Text);
             SkinsTextbox.Text = parsedData.ToString();
         }
 
@@ -2514,7 +2653,7 @@ namespace SkinEditor
         private void metroButton1_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile(label1.Text);
 
             data["1"]["SkinSeed"] = "0";
 
@@ -2620,13 +2759,13 @@ namespace SkinEditor
 
             data["47"]["SkinSeed"] = "0";
 
-            parser.WriteFile("skins.ini", data);
+            parser.WriteFile(label1.Text, data);
 
             MetroMessageBox.Show(this, "Seeds for all Weapons Reset.", "Information", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
-            var parsedData = fileIniData.ReadFile("skins.ini");
+            var parsedData = fileIniData.ReadFile(label1.Text);
             SkinsTextbox.Text = parsedData.ToString();
         }
 
@@ -2634,7 +2773,7 @@ namespace SkinEditor
         private void metroButton2_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile(label1.Text);
 
             data["1"]["SkinWear"] = "0.000001";
 
@@ -2740,13 +2879,13 @@ namespace SkinEditor
 
             data["47"]["SkinWear"] = "0.000001";
 
-            parser.WriteFile("skins.ini", data);
+            parser.WriteFile(label1.Text, data);
 
             MetroMessageBox.Show(this, "Wears for all Weapons Reset.", "Information", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
-            var parsedData = fileIniData.ReadFile("skins.ini");
+            var parsedData = fileIniData.ReadFile(label1.Text);
             SkinsTextbox.Text = parsedData.ToString();
         }
 
@@ -2754,7 +2893,7 @@ namespace SkinEditor
         private void metroButton6_Click(object sender, EventArgs e)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile("skins.ini");
+            var data = parser.ReadFile(label1.Text);
 
             data["1"]["SkinID"] = "0";
 
@@ -2860,14 +2999,14 @@ namespace SkinEditor
 
             data["47"]["SkinID"] = "0";
 
-            parser.WriteFile("skins.ini", data);
+            parser.WriteFile(label1.Text, data);
 
             MetroMessageBox.Show(this, "Are you sure that you want to Reset all Weapon Skins?", "Information",
                 MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
-            var parsedData = fileIniData.ReadFile("skins.ini");
+            var parsedData = fileIniData.ReadFile(label1.Text);
             SkinsTextbox.Text = parsedData.ToString();
         }
     }

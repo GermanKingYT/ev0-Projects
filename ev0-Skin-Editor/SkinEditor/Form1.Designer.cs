@@ -91,6 +91,7 @@
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -1802,11 +1803,21 @@
             this.metroLabel7.TabIndex = 21;
             this.metroLabel7.Text = "Preset Patterns";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 538);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.metroButton6);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
@@ -1898,6 +1909,7 @@
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton6;
+        private System.Windows.Forms.Label label1;
     }
 }
 
