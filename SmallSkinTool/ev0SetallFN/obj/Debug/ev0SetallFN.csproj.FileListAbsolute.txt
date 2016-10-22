@@ -9,3 +9,14 @@ C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.exe
 C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\obj\Debug\ev0SetallFN.pdb
 C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\bin\Debug\INIFileParser.dll
 C:\Users\RaIN\Desktop\ev0SetallFN\ev0SetallFN\bin\Debug\INIFileParser.xml
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\bin\Debug\ev0SetallFN.exe.config
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Debug\ev0SetallFN.exe
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Debug\ev0SetallFN.pdb
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\bin\Debug\ev0SetallFN.exe
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\bin\Debug\ev0SetallFN.pdb
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\bin\Debug\INIFileParser.dll
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\bin\Debug\INIFileParser.xml
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Debug\ev0SetallFN.csprojResolveAssemblyReference.cache
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Debug\ev0SetallFN.Form1.resources
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Debug\ev0SetallFN.Properties.Resources.resources
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Debug\ev0SetallFN.csproj.GenerateResource.Cache

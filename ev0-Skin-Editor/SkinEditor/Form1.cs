@@ -2577,7 +2577,7 @@ namespace SkinEditor
             data["60"]["SkinSeed"] = "0";
 
             data["61"]["SkinSeed"] = "0";
-            
+
             data["63"]["SkinSeed"] = "0";
 
             data["64"]["SkinSeed"] = "0";
@@ -2623,7 +2623,7 @@ namespace SkinEditor
             parser.WriteFile("skins.ini", data);
 
             MetroMessageBox.Show(this, "Seeds for all Weapons Reset.", "Information", MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
+                MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
             var parsedData = fileIniData.ReadFile("skins.ini");
@@ -2743,7 +2743,7 @@ namespace SkinEditor
             parser.WriteFile("skins.ini", data);
 
             MetroMessageBox.Show(this, "Wears for all Weapons Reset.", "Information", MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
+                MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
             var parsedData = fileIniData.ReadFile("skins.ini");
@@ -2862,8 +2862,9 @@ namespace SkinEditor
 
             parser.WriteFile("skins.ini", data);
 
-            MetroMessageBox.Show(this, "Are you sure that you want to Reset all Weapon Skins?", "Information", MessageBoxButtons.OKCancel,
-            MessageBoxIcon.Information);
+            MetroMessageBox.Show(this, "Are you sure that you want to Reset all Weapon Skins?", "Information",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Information);
 
             var fileIniData = new FileIniDataParser();
             var parsedData = fileIniData.ReadFile("skins.ini");
