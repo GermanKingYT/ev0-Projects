@@ -37,6 +37,7 @@
             this.awpselectskincheckbox = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.selectskinnovacombobox = new MetroFramework.Controls.MetroComboBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.selectskinmp7combobox = new MetroFramework.Controls.MetroComboBox();
             this.selectskinp2000combobox = new MetroFramework.Controls.MetroComboBox();
@@ -211,6 +212,7 @@
             // metroPanel1
             // 
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel1.Controls.Add(this.selectskinnovacombobox);
             this.metroPanel1.Controls.Add(this.metroButton3);
             this.metroPanel1.Controls.Add(this.selectskinmp7combobox);
             this.metroPanel1.Controls.Add(this.selectskinp2000combobox);
@@ -263,6 +265,42 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // selectskinnovacombobox
+            // 
+            this.selectskinnovacombobox.Enabled = false;
+            this.selectskinnovacombobox.FormattingEnabled = true;
+            this.selectskinnovacombobox.ItemHeight = 23;
+            this.selectskinnovacombobox.Items.AddRange(new object[] {
+            "Antique",
+            "Blaze Orange",
+            "Bloomstick",
+            "Caged Steel",
+            "Candy Apple",
+            "Exo",
+            "Forest Leaves",
+            "Ghost Camo",
+            "Graphite",
+            "Green Apple",
+            "Hyper Beast",
+            "Koi",
+            "Modern Hunter",
+            "Moon in Libra",
+            "Polar Mesh",
+            "Predator",
+            "Ranger",
+            "Rising Skull",
+            "Sand Dune",
+            "Tempest",
+            "Walnut"});
+            this.selectskinnovacombobox.Location = new System.Drawing.Point(156, 35);
+            this.selectskinnovacombobox.Name = "selectskinnovacombobox";
+            this.selectskinnovacombobox.Size = new System.Drawing.Size(159, 29);
+            this.selectskinnovacombobox.Sorted = true;
+            this.selectskinnovacombobox.Style = MetroFramework.MetroColorStyle.Orange;
+            this.selectskinnovacombobox.TabIndex = 48;
+            this.selectskinnovacombobox.UseSelectable = true;
+            this.selectskinnovacombobox.Visible = false;
             // 
             // metroButton3
             // 
@@ -1924,6 +1962,7 @@
         private MetroFramework.Controls.MetroButton metroButton6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroComboBox selectskinnovacombobox;
     }
 }
 
