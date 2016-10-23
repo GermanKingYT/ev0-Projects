@@ -2581,6 +2581,576 @@ namespace SkinEditor
 
                 #endregion BIZON
 
+                #region MAG7
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "MAG7")
+                    if (selectskinmag7combobox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Bulldozer")
+                        {
+                            data["27"]["SkinID"] = "39";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Cobalt Core")
+                        {
+                            data["27"]["SkinID"] = "499";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Counter Terrace")
+                        {
+                            data["27"]["SkinID"] = "462";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Firestarter")
+                        {
+                            data["27"]["SkinID"] = "385";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Hazard")
+                        {
+                            data["27"]["SkinID"] = "198";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Heat")
+                        {
+                            data["27"]["SkinID"] = "431";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Heaven Guard")
+                        {
+                            data["27"]["SkinID"] = "291";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Irradiated Alert")
+                        {
+                            data["27"]["SkinID"] = "171";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Memento")
+                        {
+                            data["27"]["SkinID"] = "177";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Metallic DDPAT")
+                        {
+                            data["27"]["SkinID"] = "34";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Petroglyph")
+                        {
+                            data["27"]["SkinID"] = "608";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Praetorian")
+                        {
+                            data["27"]["SkinID"] = "535";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Sand Dune")
+                        {
+                            data["27"]["SkinID"] = "99";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Seabird")
+                        {
+                            data["27"]["SkinID"] = "473";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Silver")
+                        {
+                            data["27"]["SkinID"] = "32";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinmag7combobox.SelectedItem.ToString() == "Storm")
+                        {
+                            data["27"]["SkinID"] = "100";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion MAG7
+
+                #region NEGEV
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "NEGEV")
+                    if (selectskinnegevcombobox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Anodized Navy")
+                        {
+                            data["28"]["SkinID"] = "28";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Army Sheen")
+                        {
+                            data["28"]["SkinID"] = "298";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Bratatat")
+                        {
+                            data["28"]["SkinID"] = "317";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "CaliCamo")
+                        {
+                            data["28"]["SkinID"] = "240";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Dazzle")
+                        {
+                            data["28"]["SkinID"] = "610";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Desert-Strike")
+                        {
+                            data["28"]["SkinID"] = "355";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Loudmouth")
+                        {
+                            data["28"]["SkinID"] = "483";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Man-o\'-war")
+                        {
+                            data["28"]["SkinID"] = "432";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Nuclear Waste")
+                        {
+                            data["28"]["SkinID"] = "369";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Palm 1")
+                        {
+                            data["28"]["SkinID"] = "157";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Palm 2")
+                        {
+                            data["28"]["SkinID"] = "201";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Power Loader")
+                        {
+                            data["28"]["SkinID"] = "514";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "Terrain")
+                        {
+                            data["28"]["SkinID"] = "285";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinnegevcombobox.SelectedItem.ToString() == "VariCamo")
+                        {
+                            data["28"]["SkinID"] = "235";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion NEGEV
+
+                #region SAWEDOFF
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "SAWEDOFF")
+                    if (selectskinsawedoffcombobox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Amber Fade")
+                        {
+                            data["29"]["SkinID"] = "246";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Bamboo Forest")
+                        {
+                            data["29"]["SkinID"] = "459";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Bamboo Shadow")
+                        {
+                            data["29"]["SkinID"] = "458";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Contrast Spray")
+                        {
+                            data["29"]["SkinID"] = "22";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Copper")
+                        {
+                            data["29"]["SkinID"] = "41";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Fade")
+                        {
+                            data["29"]["SkinID"] = "38";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "First Class")
+                        {
+                            data["29"]["SkinID"] = "345";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Forest DDPAT")
+                        {
+                            data["29"]["SkinID"] = "5";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Fubar")
+                        {
+                            data["29"]["SkinID"] = "552";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Full Stop")
+                        {
+                            data["29"]["SkinID"] = "250";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Highwayman")
+                        {
+                            data["29"]["SkinID"] = "390";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Irradiated Alert")
+                        {
+                            data["29"]["SkinID"] = "171";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Limelight")
+                        {
+                            data["29"]["SkinID"] = "596";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Mosaico")
+                        {
+                            data["29"]["SkinID"] = "204";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Orange DDPAT")
+                        {
+                            data["29"]["SkinID"] = "83";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Origami")
+                        {
+                            data["29"]["SkinID"] = "434";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Rust Coat")
+                        {
+                            data["29"]["SkinID"] = "203";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Sage Spray")
+                        {
+                            data["29"]["SkinID"] = "119";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Serenity")
+                        {
+                            data["29"]["SkinID"] = "405";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Snake Camo")
+                        {
+                            data["29"]["SkinID"] = "30";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "The Kraken")
+                        {
+                            data["29"]["SkinID"] = "256";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "VariCamo")
+                        {
+                            data["29"]["SkinID"] = "235";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinsawedoffcombobox.SelectedItem.ToString() == "Yorick")
+                        {
+                            data["29"]["SkinID"] = "517";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion SAWEDOFF
+
+                #region TEC9
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "TEC9")
+                    if (selectskintec9combobox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Army Mesh")
+                        {
+                            data["30"]["SkinID"] = "242";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Avalanche")
+                        {
+                            data["30"]["SkinID"] = "520";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Bamboo Forest")
+                        {
+                            data["30"]["SkinID"] = "459";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Blue Titanium")
+                        {
+                            data["30"]["SkinID"] = "216";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Brass")
+                        {
+                            data["30"]["SkinID"] = "159";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Forest DDPAT")
+                        {
+                            data["30"]["SkinID"] = "5";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Fuel Injector")
+                        {
+                            data["30"]["SkinID"] = "614";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Groundwater")
+                        {
+                            data["30"]["SkinID"] = "2";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Hades")
+                        {
+                            data["30"]["SkinID"] = "439";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Ice Cap")
+                        {
+                            data["30"]["SkinID"] = "599";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Isaac")
+                        {
+                            data["30"]["SkinID"] = "303";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Jambiya")
+                        {
+                            data["30"]["SkinID"] = "539";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Nuclear Threat")
+                        {
+                            data["30"]["SkinID"] = "179";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Ossified")
+                        {
+                            data["30"]["SkinID"] = "36";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Re-Entry")
+                        {
+                            data["30"]["SkinID"] = "555";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Red Quartz")
+                        {
+                            data["30"]["SkinID"] = "248";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Sandstorm")
+                        {
+                            data["30"]["SkinID"] = "289";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Terrace")
+                        {
+                            data["30"]["SkinID"] = "463";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Titanium Bit")
+                        {
+                            data["30"]["SkinID"] = "272";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Tornado 1")
+                        {
+                            data["30"]["SkinID"] = "101";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Tornado 2")
+                        {
+                            data["30"]["SkinID"] = "206";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Toxic")
+                        {
+                            data["30"]["SkinID"] = "374";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "Urban DDPAT")
+                        {
+                            data["30"]["SkinID"] = "17";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskintec9combobox.SelectedItem.ToString() == "VariCamo")
+                        {
+                            data["30"]["SkinID"] = "235";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion TEC9
+
+                #region P2000
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "P2000")
+                    if (selectskinp2000combobox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Amber Fade")
+                        {
+                            data["32"]["SkinID"] = "246";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Asterion")
+                        {
+                            data["32"]["SkinID"] = "442";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Chainmail")
+                        {
+                            data["32"]["SkinID"] = "327";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Coach Class")
+                        {
+                            data["32"]["SkinID"] = "346";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Corticera")
+                        {
+                            data["32"]["SkinID"] = "184";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Fade")
+                        {
+                            data["32"]["SkinID"] = "38";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Fire Elemental")
+                        {
+                            data["32"]["SkinID"] = "389";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Forest Leaves")
+                        {
+                            data["32"]["SkinID"] = "25";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Granite Marbleized")
+                        {
+                            data["32"]["SkinID"] = "21";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Grassland")
+                        {
+                            data["32"]["SkinID"] = "95";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Grassland Leaves")
+                        {
+                            data["32"]["SkinID"] = "104";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Handgun")
+                        {
+                            data["32"]["SkinID"] = "485";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Imperial Dragon")
+                        {
+                            data["32"]["SkinID"] = "591";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Ivory")
+                        {
+                            data["32"]["SkinID"] = "357";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Ocean Foam")
+                        {
+                            data["32"]["SkinID"] = "211";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Oceanic")
+                        {
+                            data["32"]["SkinID"] = "550";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Ossified")
+                        {
+                            data["32"]["SkinID"] = "36";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Pathfinder")
+                        {
+                            data["32"]["SkinID"] = "443";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Pulse")
+                        {
+                            data["32"]["SkinID"] = "338";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Red FragCam")
+                        {
+                            data["32"]["SkinID"] = "275";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Scorpion")
+                        {
+                            data["32"]["SkinID"] = "71";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinp2000combobox.SelectedItem.ToString() == "Silver")
+                        {
+                            data["32"]["SkinID"] = "32";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion P2000
+
                 MetroMessageBox.Show(this, "Skin for " + choseweaponcombobox.SelectedItem + " saved!", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
