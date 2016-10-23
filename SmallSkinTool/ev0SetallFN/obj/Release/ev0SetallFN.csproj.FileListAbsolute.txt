@@ -18,3 +18,4 @@ F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Release\ev0SetallFN
 F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Release\ev0SetallFN.csproj.GenerateResource.Cache
 F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Release\ev0SetallFN.exe
 F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Release\ev0SetallFN.pdb
+F:\RaIN Repos New\ev0-Projects\SmallSkinTool\ev0SetallFN\obj\Release\ev0SetallFN.csprojResolveAssemblyReference.cache
