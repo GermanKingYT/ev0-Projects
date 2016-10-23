@@ -3151,6 +3151,151 @@ namespace SkinEditor
 
                 #endregion P2000
 
+                #region R8-REVOLVER
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "R8-REVOLVER")
+                    if (selectskinr9revolvercombobox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (selectskinr9revolvercombobox.SelectedItem.ToString() == "Amber Fade")
+                        {
+                            data["64"]["SkinID"] = "523";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinr9revolvercombobox.SelectedItem.ToString() == "Bone Mask")
+                        {
+                            data["64"]["SkinID"] = "27";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinr9revolvercombobox.SelectedItem.ToString() == "Crimson Web")
+                        {
+                            data["64"]["SkinID"] = "232";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinr9revolvercombobox.SelectedItem.ToString() == "Fade")
+                        {
+                            data["64"]["SkinID"] = "522";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (selectskinr9revolvercombobox.SelectedItem.ToString() == "Reboot")
+                        {
+                            data["64"]["SkinID"] = "595";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion R8-REVOLVER
+
+                #region CZ75A
+
+                if (choseweaponcombobox.SelectedItem.ToString() == "CZ75A")
+                    if (czselectskincheckbox.SelectedItem == null)
+                    {
+                        MetroMessageBox.Show(this, "Please Select a Skin and try again!", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Chalice")
+                        {
+                            data["63"]["SkinID"] = "325";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Crimson Web")
+                        {
+                            data["63"]["SkinID"] = "12";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Emerald")
+                        {
+                            data["63"]["SkinID"] = "453";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Green Plaid")
+                        {
+                            data["63"]["SkinID"] = "366";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Hexane")
+                        {
+                            data["63"]["SkinID"] = "218";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Imprint")
+                        {
+                            data["63"]["SkinID"] = "602";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Nitro 1")
+                        {
+                            data["63"]["SkinID"] = "254";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Nitro 2")
+                        {
+                            data["63"]["SkinID"] = "322";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Poison Dart")
+                        {
+                            data["63"]["SkinID"] = "315";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Pole Position")
+                        {
+                            data["63"]["SkinID"] = "435";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Red Astor")
+                        {
+                            data["63"]["SkinID"] = "543";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "The Fuschia Is Now")
+                        {
+                            data["63"]["SkinID"] = "269";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Tigris")
+                        {
+                            data["63"]["SkinID"] = "350";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Tread Plate")
+                        {
+                            data["63"]["SkinID"] = "268";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Tuxedo")
+                        {
+                            data["63"]["SkinID"] = "297";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Twist")
+                        {
+                            data["63"]["SkinID"] = "334";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Victoria")
+                        {
+                            data["63"]["SkinID"] = "270";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                        if (czselectskincheckbox.SelectedItem.ToString() == "Yellow Jacket")
+                        {
+                            data["63"]["SkinID"] = "476";
+                            parser.WriteFile(label1.Text, data);
+                        }
+                    }
+
+                #endregion CZ75A
+
                 MetroMessageBox.Show(this, "Skin for " + choseweaponcombobox.SelectedItem + " saved!", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
