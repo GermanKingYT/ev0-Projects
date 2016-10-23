@@ -9,6 +9,8 @@ ___
 
 -Integrated ini-parser [FINISHED]
 
+-Config File for Directory saving [FINISHED]
+
 -Preset Patterns [WORK IN PROGRESS]
 
 -Change Skin for Weapons [WORK IN PROGRESS]
