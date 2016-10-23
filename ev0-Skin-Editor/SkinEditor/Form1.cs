@@ -23,7 +23,6 @@ namespace SkinEditor
 
             string Directory = dataDirectory["Settings"]["Directory"];
             label2.Text = Directory;
-            label2.Visible = false;
 
             if (File.Exists(label2.Text))
             {
@@ -31,7 +30,7 @@ namespace SkinEditor
                 var fileIniData = new FileIniDataParser();
                 var parsedData = fileIniData.ReadFile(label2.Text);
                 SkinsTextbox.Text = parsedData.ToString();
-                label2.Visible = false;
+                label1.Text = label2.Text;
             }
             else
             {
@@ -60,7 +59,6 @@ namespace SkinEditor
                         var dataConfig = parserConfig.ReadFile("Config.ini");
                         dataConfig["Settings"]["Directory"] = tempPath + @"\ev0lve\skins.ini";
                         parserConfig.WriteFile("Config.ini", dataConfig);
-                        label2.Visible = false;
                     }
                     else
                     {
